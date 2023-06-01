@@ -11,7 +11,7 @@ export const Header = () => {
         <h1 className="title__main">Rande Prahou</h1>
       </div>
 
-      {/* <div className="hamburger">
+      <div className="hamburger">
         <div className="hamburger__line">
           <a href="index.html"></a>
         </div>
@@ -21,7 +21,7 @@ export const Header = () => {
         <div className="hamburger__line">
           <a href="petra.html"></a>
         </div>
-      </div> */}
+      </div>
 
       <nav className="menu">
         <a href="/">O projektu</a>
