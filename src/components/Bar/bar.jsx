@@ -1,16 +1,21 @@
 import React from 'react';
 import './bar.css';
-// import { Filter } from 'copy-webpack-plugin';
+import { Filter } from '../Filter/filter';
 
 export const Bar = () => {
   return (
     <div className="bar">
+      <input type="text" className="input" defaultValue={'Zadejte adresu'} />
       <div className="address">
-        <input type="text" className="input" defaultValue={'Zadejte adresu'} />
-        {/* <Filter />
+        <br />
         <Filter />
+        <br />
         <Filter />
-        <Filter /> */}
+        <br />
+        <Filter />
+        <br />
+        <Filter />
+        <br />
       </div>
       <button class="search">Vyhledat</button>
     </div>

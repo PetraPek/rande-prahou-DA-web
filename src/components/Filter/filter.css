@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Montserrat:wght@200&family=Permanent+Marker&display=swap");
+
+
+.filter {
+  display: flex;
+  align-items: center;
+  /* border: rgb(179, 176, 176) solid 2px; */
+  border-radius: 25px;
+  height: 10%;
+  text-align: end;
+}
+
+.typeOfPlace {
+  font-family: Montserrat;
+  margin: 10px;
+}
