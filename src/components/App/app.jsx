@@ -5,6 +5,7 @@ import { Home } from '../Home/home';
 import { Petra } from '../Petra/petra';
 import { Johana } from '../Johana/johana';
 import { Footer } from '../Footer/footer';
+import { Mapa } from '../Mapa/mapa';
 
 export const App = () => (
   <>

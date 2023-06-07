@@ -1,4 +1,5 @@
 import React from 'react';
+import './mapa.css';
 import { Bar } from '../Bar/bar';
 
 export const Mapa = () => {
