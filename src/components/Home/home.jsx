@@ -40,7 +40,7 @@ export const Home = () => {
                 alt="figma-mapa-druhastrana"
               />
             </div>
-            <a class="button" href="">
+            <a class="button" href="/mapa">
               Kam vyrazit?
             </a>
           </div>

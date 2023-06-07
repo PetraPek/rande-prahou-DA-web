@@ -10,7 +10,7 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -19,12 +19,11 @@ body {
   height: 100vh;
 }
 
-/* 
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
-} */
+}
 
 .header {
   background-color: #fff;
@@ -64,11 +63,10 @@ body {
   align-items: center;
   padding: 20px;
   margin: 20px 40px 10px 40px;
+  min-width: 323px;
   background-color: rgba(225, 225, 225, 0.5);
   border-radius: 25px;
-  position: relative;
-  z-index: 2;
-
+  min-height: 80vh;
 }
 
 /* .background {
@@ -129,6 +127,7 @@ img {
   padding: 20px;
   text-align: center;
   position: relative;
+  min-width: 319px;
 
 }
 
@@ -159,8 +158,8 @@ img {
 } */
 
 .personal__foto {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -205,7 +204,7 @@ img {
   /* display: block; */
   border-radius: 5px;
   padding: 10px;
-  margin: 90px;
+  margin: 60px;
 }
 
 .hamburger {
@@ -223,23 +222,23 @@ img {
 
 /* Responsivní styly */
 @media (min-width: 840px) {
+
   .header {
-    flex-direction: column;
-    align-items: start;
-    height: 5vh;
+    height: 10vh;
+
   }
 
-  /* .title__main {
-    margin-bottom: 10px;
-  } */
+  .title__main {
+    font-size: 200%;
+  }
 
   .description__question {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .description__introduction,
   .description__project {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .personal__card {
@@ -248,8 +247,8 @@ img {
   }
 
   .personal__foto {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     top: -35px;
     left: -35px;
   }
@@ -263,6 +262,10 @@ img {
     font-size: 16px;
   }
 
+  .gitHub {
+    margin: 60px 60px 10px 60px;
+  }
+
   .hamburger {
     display: none;
   }
@@ -270,6 +273,7 @@ img {
   .menu {
     display: flex;
     flex-direction: row;
+    color: #333;
     align-items: center;
     padding: 20px;
     margin-top: 10px;
@@ -286,5 +290,6 @@ img {
   a {
     padding: 10px;
     text-decoration: none;
+    color: #333;
   }
 }
