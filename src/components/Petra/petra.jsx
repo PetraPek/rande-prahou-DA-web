@@ -1,4 +1,5 @@
 import React from 'react';
+import './petra.css';
 import petra from './img/petra.jpg';
 
 export const Petra = () => {

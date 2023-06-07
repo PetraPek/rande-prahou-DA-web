@@ -10,7 +10,7 @@ import {
 
 export const SimpleMap = () => {
   return (
-    <Map>
+    <Map height="100%" center={{ lat: 50.0755, lng: 14.4378 }}>
       <ZoomControl />
       <CompassControl top={50} />
       <KeyboardControl />

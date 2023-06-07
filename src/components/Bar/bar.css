@@ -4,14 +4,16 @@
 .bar {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  z-index: 1;
   /* align-items: end; */
-  width: 30%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   padding: 30px;
   position: absolute;
-  top: 100px;
-  left: 20px;
-  background-color: rgba(233, 233, 233, 0.6);
+  top: calc(85vh- 30%);
+  left: calc(100%/2 - 60%/2);
+  background-color: rgba(233, 233, 233, 0.8);
   border-radius: 25px;
 }
 
@@ -33,7 +35,7 @@
   font-family: Montserrat;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 0.7rem;
   text-align: center;
   text-decoration: none;
   /* display: block; */
@@ -42,9 +44,24 @@
 
 }
 
-.address {
+.filters {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 840px) {
+  .bar {
+    width: 250px;
+    height: 80%;
+    left: 30px;
+    justify-content: start;
+  }
+
+  .filters {
+    position: absolute;
+    left: 50px;
+    top: 25%
+  }
 }

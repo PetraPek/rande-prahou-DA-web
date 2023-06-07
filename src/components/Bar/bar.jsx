@@ -6,7 +6,8 @@ export const Bar = () => {
   return (
     <div className="bar">
       <input type="text" className="input" defaultValue={'Zadejte adresu'} />
-      <div className="address">
+
+      <div className="filters">
         <br />
         <Filter />
         <br />
@@ -17,6 +18,7 @@ export const Bar = () => {
         <Filter />
         <br />
       </div>
+
       <button class="search">Vyhledat</button>
     </div>
   );
