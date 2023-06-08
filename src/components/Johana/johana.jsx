@@ -5,12 +5,12 @@ import johyy from './img/johyy.jpg';
 export const Johana = () => {
   return (
     <div className="content">
-      <div>
-        <div className="description">
+      <div className="personal__card">
+        <div className="personal__description">
           <h1 className="personal__title">Johanka</h1>
           <img className="personal__foto" src={johyy} alt="Johana Pokorná" />
 
-          <p className=".description__introduction">
+          <p className="personal__description">
             Kdo jsem a něco o mně - jsem otevřená kniha, miluju zábavu, ráda se
             pousměji, zasměji a nakonec i rozesměji. Ráda trávím čas s přáteli,
             ale zároveň potřebuji mít někdy vlastní klid, ač to na první pohled
@@ -18,7 +18,7 @@ export const Johana = () => {
             jednou využít i ve své profesi.
           </p>
 
-          <p className=".description__introduction">
+          <p className="personal__description">
             Co se týče mé cesty do IT - je tomu asi rok, kdy jsem se rozhodla o
             změnu kariérní cesty a vybrala jsem si právě IT. Googlila jsem a
             googlila, jak se prý v IT dělá často, a narazila na kurz Digitální

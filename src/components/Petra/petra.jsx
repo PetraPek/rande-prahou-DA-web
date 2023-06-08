@@ -4,18 +4,18 @@ import petra from './img/petra.jpg';
 
 export const Petra = () => {
   return (
-    <div class="content">
-      <div>
-        <div class="description">
-          <h1 class="personal__title">Peťa</h1>
-          <img class="personal__foto" src={petra} alt="Petra Pekařová" />
+    <div className="content">
+      <div className="personal__card">
+        <div className="personal__description">
+          <h1 className="personal__title">Peťa</h1>
+          <img className="personal__foto" src={petra} alt="Petra Pekařová" />
 
-          <p class="description__iintroduction">
+          <p className="personal__description">
             Ke kódování, programování a celkově k Czechitas jsem se dostala jako
             slepý k houslím díky své bývalé práci.
           </p>
 
-          <p class="description__introduction">
+          <p className="personal__description">
             Působila jsem na pozici IT Recruitera a rozčilovalo mě, že nerozumím
             tomu, co kandidátům nabízím. Začala jsem googlit a našla Czechitas a
             jejich kurzy. Absolvovala jsem různé kurzy abych věděla co dělá
@@ -23,7 +23,7 @@ export const Petra = () => {
             tady.
           </p>
 
-          <a class="gitHub" href="https://github.com/PetraPek">
+          <a className="gitHub" href="https://github.com/PetraPek">
             GitHub
           </a>
         </div>

@@ -10,7 +10,6 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -56,18 +55,7 @@ body {
 }
 
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin: 20px 40px 10px 40px;
-  min-width: 323px;
-  background-color: rgba(225, 225, 225, 0.5);
-  border-radius: 25px;
-  min-height: 80vh;
-}
+
 
 /* .background {
   display: flex;
@@ -88,6 +76,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.figma_logo {
+  width: 30%;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.figma_secondpage {
+  width: 30%;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 
@@ -123,8 +123,8 @@ body {
   padding: 20px;
   text-align: center;
   position: relative;
+  bottom: 0px;
   min-width: 319px;
-
 }
 
 .footer__name {
@@ -153,24 +153,7 @@ body {
 
 } */
 
-.personal__foto {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto;
-  border: 1px solid white;
-  box-shadow: black 4px 6px 20px;
-}
 
-
-.personal__title {
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px;
-  margin: auto;
-  text-align: center;
-}
 
 .button {
   background-color: gray;
@@ -189,19 +172,7 @@ body {
   /* width: 90%; */
 }
 
-.gitHub {
-  background-color: gray;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: none;
-  /* display: block; */
-  border-radius: 5px;
-  padding: 10px;
-  margin: 60px;
-}
+
 
 .hamburger {
   display: block;
