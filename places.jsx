@@ -101,6 +101,7 @@ const places = [
 
 const nature = [
   {
+    id: 1,
     name: 'Petřínské sady',
     address: 'Petřínské sady 118 00, 118 00 Praha 1-Malá Strana',
     coordinates: '50.0822666,14.4004938,17z',
@@ -109,6 +110,7 @@ const nature = [
     img: './img/petrin-park',
   },
   {
+    id: 2,
     name: 'Grébovka',
     address: 'Havlíčkovy sady, 120 00 Praha 2-Vinohrady',
     coordinates: '50.0694696,14.4359799,16z',
@@ -117,6 +119,7 @@ const nature = [
     img: './img/Grébovka',
   },
   {
+    id: 3,
     name: 'Ďablický háj',
     address: 'K lomu 985/4, 182 00 Ďáblice',
     coordinates: '50.1368511,14.44869,15z',
@@ -125,14 +128,17 @@ const nature = [
     img: './img/Ďáblický-háj',
   },
   {
+    id: 4,
     name: 'Vrch Třešňovka',
     address: '',
-    coordinates: '50°5'47.101"N 14°30'3.811"E',
+    // coordinates: '50°5'47.101"N 14°30'3.811"E',
     opening_hours: '',
     url: 'https://prazskevyhledy.cz/vrch-tresnovka/',
     img: '',
   },
+
   {
+    id: 5,
     name: 'Laser game',
     address: '',
     coordinates: '',
@@ -141,6 +147,7 @@ const nature = [
     img: '',
   },
   {
+    id: 6,
     name: 'Laser game',
     address: '',
     coordinates: '',
@@ -149,6 +156,7 @@ const nature = [
     img: '',
   },
   {
+    id: 7,
     name: 'Laser game',
     address: '',
     coordinates: '',
@@ -157,6 +165,7 @@ const nature = [
     img: '',
   },
   {
+    id: 8,
     name: 'Laser game',
     address: '',
     coordinates: '',
@@ -165,6 +174,7 @@ const nature = [
     img: '',
   },
   {
+    id: 9,
     name: 'Laser game',
     address: '',
     coordinates: '',
@@ -173,6 +183,7 @@ const nature = [
     img: '',
   },
   {
+    id: 10,
     name: 'Laser game',
     address: '',
     coordinates: '',
