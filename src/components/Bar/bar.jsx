@@ -11,12 +11,12 @@ export const Bar = () => {
         <br />
         <Filter />
         <br />
-        <Filter />
+        {/* <Filter />
         <br />
         <Filter />
         <br />
         <Filter />
-        <br />
+        <br /> */}
       </div>
 
       <button class="search">Vyhledat</button>

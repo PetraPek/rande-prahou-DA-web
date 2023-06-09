@@ -13,8 +13,8 @@
   position: absolute;
   top: calc(85vh- 30%);
   left: calc(100%/2 - 60%/2);
-  background-color: rgba(233, 233, 233, 0.8);
-  border-radius: 25px;
+  background-color: rgba(240, 239, 239, 0.876);
+  border-radius: 15px;
 }
 
 .input {
@@ -27,10 +27,10 @@
 }
 
 .search {
-  position: absolute;
+  /* position: absolute;
   bottom: 20px;
-  right: 20px;
-  background-color: gray;
+  right: 20px; */
+  background-color: #EEEEEE;
   color: white;
   font-family: Montserrat;
   text-transform: uppercase;
