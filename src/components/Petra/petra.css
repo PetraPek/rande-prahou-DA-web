@@ -1,7 +1,26 @@
+.personal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.personal__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  padding: 30px 30px 20px 30px;
+  background-color: rgba(233, 233, 233, 0.6);
+  border-radius: 25px;
+}
+
 .personal__foto {
-  /* width: 50%;
+  width: 50%;
   padding: 10px;
-  border-radius: 25px; */
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -9,10 +28,7 @@
   margin: 0 auto;
   border: 1px solid white;
   box-shadow: black 4px 6px 20px;
-  position: relative;
-  bottom: calc(150px/2);
 }
-
 
 .personal__title {
   position: relative;
@@ -24,52 +40,17 @@
   text-align: center;
 }
 
-.content {
-  /* display: block; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  /* padding: 20px;
-  margin: 20px 40px 10px 40px;
-  min-width: 323px;
- background-color: rgba(225, 225, 225, 0.5);
-border-radius: 25px; */
-  min-height: 90vh;
-}
-
 .personal__description {
-
   display: flex;
   flex-direction: column;
   justify-content: start;
   text-align: center;
   color: black;
   line-height: 1.5;
-  /* height: 60vh; */
-
-}
-
-.personal__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 90%;
-  height: 80%;
-  padding: 30px;
-  position: absolute;
-  top: calc(50% - 70%/ 2);
-  left: calc(50% - 90% / 2);
-  background-color: rgba(233, 233, 233, 0.6);
-  border-radius: 25px;
-}
-
-.personal__description {
   font-size: 15px;
 }
 
 .gitHub {
-  position: relative;
-  bottom: 40px;
   background-color: gray;
   color: white;
   text-transform: uppercase;
@@ -77,8 +58,9 @@ border-radius: 25px; */
   font-size: 18px;
   text-align: center;
   text-decoration: none;
-  /* display: block; */
   border-radius: 5px;
   padding: 10px;
   margin: 60px;
 }
+
+@media (min-width: 840px) {}
