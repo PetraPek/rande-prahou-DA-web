@@ -11,7 +11,7 @@ export const App = () => (
   <>
     <Header />
     <RouterProvider router={router} />
-    <Footer />
+    {/* <Footer /> */}
   </>
 );
 
