@@ -49,13 +49,49 @@ body {
   font-family: 'Amatic SC', cursive;
 }
 
-/* .menu {
+.content {
   display: flex;
-  gap: 20px;
-} */
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 
+.description_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 90%;
+  height: 95%;
+  padding: 30px 30px 20px 30px;
+  /* position: absolute;
+  top: calc(50% - 75%/ 2);
+  left: calc(50% - 90% / 2); */
+  background-color: rgba(233, 233, 233, 0.6);
+  border-radius: 25px;
+}
 
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
 
+}
+
+.description__question {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.description__introduction {
+  font-size: 80%;
+}
+
+.description__project {
+  font-size: 80%;
+  margin: 0 0 10px 0;
+}
 
 /* .background {
   display: flex;
@@ -78,42 +114,14 @@ body {
   justify-content: center;
 }
 
-.figma_logo {
-  width: 30%;
+.figma_picture {
+  width: 50%;
   padding: 10px;
   border-radius: 25px;
 }
 
-.figma_secondpage {
-  width: 30%;
-  padding: 10px;
-  border-radius: 25px;
-}
 
-.description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: black;
-  line-height: 1.5;
-  /* height: 60vh; */
-}
 
-.description__question {
-  font-size: 100%;
-  font-weight: bold;
-  margin: 10px;
-}
-
-.description__introduction {
-  font-size: 80%;
-}
-
-.description__project {
-  font-size: 80%;
-  margin: 0 0 10px 0;
-}
 
 /* .footer {
   background-color: #333;
