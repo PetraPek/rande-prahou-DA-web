@@ -184,6 +184,7 @@ const nature = [
 
 const restaurant = [
   {
+    id: 1,
     name: 'Brambory na Pankráci',
     address: 'Na Pankráci 1724/129, Praha 4',
     coordinates: '50.0508484, 14.4408838',
@@ -193,6 +194,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 2,
     name: 'Bufet Karlín',
     address: 'U nádražní lávky 81/2, 18600 Praha 8 - Karlín',
     coordinates: '50.0508484, 14.4408838',
