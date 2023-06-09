@@ -290,6 +290,7 @@ const restaurant = [
 
 const cafe = [
   {
+    id: 1,
     name: 'Ô-MAI',
     address: 'Sokolovská 444/118, Praha, 18600 Karlín',
     coordinates: '50.0730522, 14.4361752',
@@ -299,6 +300,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 2,
     name: 'Etapa',
     address: 'Urxova 479/6, 18600 Praha',
     coordinates: '50.0945747,14.4578129',
@@ -307,6 +309,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 3,
     name: 'Café Záhorský',
     address: 'Eliášova 1, Praha 6, Dejvice 160 00',
     coordinates: '50.0945747, 14.4578129',
@@ -315,6 +318,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 4,
     name: 'Mezi srnky Vinohrady',
     address: 'Sázavská 720/19, 120 00 Praha 2',
     coordinates: '50.0763421, 14.4223900',
@@ -323,6 +327,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 5,
     name: 'BISTRO PROTI PROUDU',
     address: 'Březinova 22 / 471, Praha 8 – Karlín, 186 00',
     coordinates: '50.0945706, 14.4561232',
@@ -331,6 +336,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 6,
     name: 'Šodó',
     address: 'Wuchterlova 1, 16000 Praha',
     coordinates: '19.873400, 5.2498013',
@@ -339,6 +345,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 7,
     name: 'Choco Café',
     address: 'Liliová 250/4, 11000 Praha 1 - Staré Město',
     coordinates: '50.0845713, 14.4165841',
@@ -347,6 +354,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 8,
     name: 'SmetanaQ',
     address: 'Smetanovo nábřeží 334/4, Praha 1, 110 00',
     coordinates: '50,082046 14,413262',
@@ -355,6 +363,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 9,
     name: 'Skautský institut',
     address: 'Staroměstské náměstí 4/1, 11000 Praha 1 - Staré Město',
     coordinates: '50.0866698, 14.4199369',
@@ -363,6 +372,7 @@ const cafe = [
     img: '',
   },
   {
+    id: 10,
     name: 'Anežka',
     address: 'Anežská 812/12, 110 00',
     coordinates: '50.0920396, 14.4239316',
