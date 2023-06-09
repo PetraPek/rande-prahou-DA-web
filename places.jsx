@@ -139,7 +139,7 @@ const nature = [
 
   {
     id: 5,
-    name: 'Laser game',
+    name: 'Thomayerovy sady',
     address: '',
     coordinates: '',
     opening_hours: '',
@@ -148,7 +148,7 @@ const nature = [
   },
   {
     id: 6,
-    name: 'Laser game',
+    name: 'Stezka podél řeky Rokytka',
     address: '',
     coordinates: '',
     opening_hours: '',
@@ -157,7 +157,7 @@ const nature = [
   },
   {
     id: 7,
-    name: 'Laser game',
+    name: 'stezka podél Vltavy do Klecan',
     address: '',
     coordinates: '',
     opening_hours: '',
@@ -166,7 +166,7 @@ const nature = [
   },
   {
     id: 8,
-    name: 'Laser game',
+    name: 'Stromovka',
     address: '',
     coordinates: '',
     opening_hours: '',
@@ -175,7 +175,7 @@ const nature = [
   },
   {
     id: 9,
-    name: 'Laser game',
+    name: 'Divoká Šárka',
     address: '',
     coordinates: '',
     opening_hours: '',
@@ -184,7 +184,7 @@ const nature = [
   },
   {
     id: 10,
-    name: 'Laser game',
+    name: 'Prokopské údolí',
     address: '',
     coordinates: '',
     opening_hours: '',
