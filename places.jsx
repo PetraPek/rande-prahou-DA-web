@@ -214,6 +214,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 3,
     name: 'Diego pivní bar',
     address: 'Sokolovská 467/114, Praha 8',
     coordinates: '50.0946785, 14.4553500',
@@ -222,6 +223,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 4,
     name: 'Big Smokers',
     address: 'Dělnická 40, Praha 7 - Holešovice, 170 00',
     coordinates: '50.0946785, 14.4553500',
@@ -230,6 +232,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 5,
     name: 'Automat Matuška',
     address: 'Dejvická 4, Praha 6, 160 00',
     coordinates: '50.0946785, 14.4553500',
@@ -239,6 +242,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 6,
     name: 'Vinohradský pivovar',
     address: 'Korunní 2506/106, 101 00 Praha 10',
     coordinates: '50.0946785, 14.4553500',
@@ -247,6 +251,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 7,
     name: 'Knedlín',
     address: 'Národní 24, Praha 1',
     coordinates: 'po-čt 9:00-21:00, pá 9:00-22:00, so-ne 10:00-22:00',
@@ -255,6 +260,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 8,
     name: 'Meat Vandals',
     address: 'Myslíkova 172/29, 11000 Praha 1',
     coordinates: '50.0782736, 14.4186861',
@@ -263,6 +269,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 9,
     name: 'Grosseto Vinohrady',
     address: 'Francouzská 2, Praha 2',
     coordinates: '50.0747202, 14.4352239',
@@ -271,6 +278,7 @@ const restaurant = [
     img: '',
   },
   {
+    id: 10,
     name: 'Dish',
     address: 'Belgická 335/26, Praha 2, Vinohrady',
     coordinates: '50.0730522, 14.4361752',
