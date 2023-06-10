@@ -18,7 +18,7 @@ export const Bar = () => {
         <Filter />
         <br /> */}
       </div>
-
+      <button className="select__all">Vybrat vše</button>
       <button className="search">Vyhledat</button>
     </div>
   );

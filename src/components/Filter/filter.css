@@ -10,13 +10,14 @@
   border-radius: 10px;
   height: 60px;
   width: 120px;
-  margin: 10px;
+
 
   text-align: center;
 }
 
 .restaurant {
   background-color: rgb(140, 190, 194);
+
 }
 
 .coffee {
@@ -24,7 +25,6 @@
 }
 
 .nature {
-
   background-color: #F8CE6D;
 }
 
@@ -36,5 +36,12 @@
   font-family: Montserrat;
   font-size: 11px;
   color: white;
+}
 
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0;
+  gap: 10px;
 }
