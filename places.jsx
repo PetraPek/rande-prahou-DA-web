@@ -1,9 +1,9 @@
-const places = [
+export const places = [
   {
     id: 1,
     name: 'THE POPUP!',
     address: 'Dvorecké nám. 406/5, 147 00 Praha 4-Podolí',
-    coordinates: '50.0464865,14.4141612,18z',
+    coordinates: [50.0464865, 14.4141612],
     opening_hours:
       'ÚT / ČT Individuálně dle dohody  PO / ST / PÁ 14:00 - 20:00 SO / NE 10:00 - 18:30 ',
     url: 'https://www.thepopup.cz/',
@@ -14,7 +14,7 @@ const places = [
     name: 'Neviditelná večeře',
     address:
       'Novoměstská radnice 2. patro Karlovo nám. 1/23 - vstup z Vodičkovy ulice 120 00 Praha 2',
-    coordinates: '50.078158,14.42119,14z',
+    coordinates: [50.078158, 14.42119],
     opening_hours:
       'Po - Pá: 12:00 - 20:00 (Poslední návštěvníci v 19:00) So - Ne a svátky: 10:00 - 20:00 (Poslední návštěvníci v 19:00)',
     url: 'https://neviditelna.cz/neviditelna-vecere',
@@ -24,7 +24,7 @@ const places = [
     id: 3,
     name: 'Laser game',
     address: 'Bohnická 320/40, 181 00 Praha',
-    coordinates: '50.1330323,14.412751,17z',
+    coordinates: [50.1330323, 14.412751],
     opening_hours:
       'Po 14:00 - 22:00 Út 14:00 - 22:00 St 14:00 - 22:00 Čt 14:00 - 22:00 Pá 14:00 - 23:00 So 10:00 - 23:00 Ne 10:00 - 22:00',
     url: 'https://www.lasergamegalaxy.cz/',
@@ -34,7 +34,7 @@ const places = [
     id: 4,
     name: 'Prague Boats - vyhlídková plavba',
     address: 'Dvořákovo nábř., 110 00 Josefov, Česko',
-    coordinates: '50.091838,14.416337,15z',
+    coordinates: [50.091838, 14.416337],
     opening_hours:
       'kancelář na nástupišti číslo 3 je otevřena denně od 9.00 do 22.00',
     url: 'https://www.prague-boats.cz/cs/plavby-po-vltave',
@@ -45,7 +45,7 @@ const places = [
     id: 5,
     name: 'Půjčovna lodiček a šlapadel Slovanka',
     address: 'Slovanský ostrov, Praha 1, 110 00',
-    coordinates: '50.0793101,14.4121909,15z',
+    coordinates: [50.0793101, 14.4121909],
     opening_hours: 'OTEVŘENO každý den od 11:00-22:50 za pěkného počasí.',
     url: 'https://www.slovanka.net/index.php',
     img: './img/Šlapadla',
@@ -54,7 +54,7 @@ const places = [
     id: 6,
     name: 'Motokáry Radotín',
     address: 'Výpadová 1335, Praha 5 Radotín',
-    coordinates: '49.9869742,14.3711757,17z',
+    coordinates: [49.9869742, 14.3711757],
     opening_hours: 'Pondělí až neděle, 11:00 - 24:00',
     url: 'https://www.kart-centrum.cz/',
     img: './img/Motokáry',
@@ -64,7 +64,7 @@ const places = [
     name: 'Letní kino Sunset cinema',
     address:
       'Střecha obchodního centra Arkády Pankrác, Na Pankráci 86, 140 00 Praha 4-Nusle',
-    coordinates: '50.0509039,14.4360898,17z',
+    coordinates: [50.0509039, 14.4360898],
     opening_hours: '',
     url: 'http://sunsetcinema.cz/cz',
     img: './img/Letní kino',
@@ -73,7 +73,7 @@ const places = [
     id: 8,
     name: 'Ladronka - in-line',
     address: 'Tomanova 1028/1, 169 00 Praha 6-Břevnov',
-    coordinates: '50.0787136,14.3541518,17z',
+    coordinates: [50.0787136, 14.3541518],
     opening_hours: '',
     url: 'https://www.prague.eu/cs/objekt/mista/3357/ladronka',
     img: './img/Ladronka',
@@ -82,7 +82,7 @@ const places = [
     id: 9,
     name: 'JumpArena',
     address: 'Ringhofferova 1,155 00 Zličín,Praha 5',
-    coordinates: '50.055025,14.293349,16z',
+    coordinates: [50.055025, 14.293349],
     opening_hours:
       'Pondělí - pátek 10:00 - 20:00,Sobota a neděle 09:00 - 20:00',
     url: 'https://zlicin.jumppark.cz/',
@@ -92,19 +92,19 @@ const places = [
     id: 10,
     name: 'Úniková hra',
     address: 'Mánesova 1613, 120 00 Vinohrady',
-    coordinates: '50.0775832,14.4400191,17z',
+    coordinates: [50.0775832, 14.4400191],
     opening_hours: 'po-ne: 10.00-22.00',
     url: 'https://questerland.cz/',
     img: './img/UnikovaHra',
   },
 ];
 
-const nature = [
+export const nature = [
   {
     id: 1,
     name: 'Petřínské sady',
     address: 'Petřínské sady 118 00, 118 00 Praha 1-Malá Strana',
-    coordinates: '50.0822666,14.4004938,17z',
+    coordinates: [50.0822666, 14.4004938],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.prague.eu/cs/objekt/mista/504/petrinske-sady',
     img: './img/petrin-park',
@@ -113,7 +113,7 @@ const nature = [
     id: 2,
     name: 'Grébovka',
     address: 'Havlíčkovy sady, 120 00 Praha 2-Vinohrady',
-    coordinates: '50.0694696,14.4359799,16z',
+    coordinates: [50.0694696, 14.4359799],
     opening_hours: 'Otevřeno ⋅ Zavírá v 22',
     url: 'https://www.prague.eu/cs/objekt/mista/464/grebovka-havlickovy-sady',
     img: './img/Grébovka',
@@ -122,7 +122,7 @@ const nature = [
     id: 3,
     name: 'Ďablický háj',
     address: 'K lomu 985/4, 182 00 Ďáblice',
-    coordinates: '50.1368511,14.44869,15z',
+    coordinates: [50.1368511, 14.44869],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.kudyznudy.cz/aktivity/dablicky-haj-s-tajemnym-vrchem-ladvi',
     img: './img/Ďáblický-háj',
@@ -131,7 +131,7 @@ const nature = [
     id: 4,
     name: 'Vrch Třešňovka',
     address: '190 00, Praha 9',
-    coordinates: '50.0973605,14.5055092,15z',
+    coordinates: [50.0973605, 14.5055092],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://prazskevyhledy.cz/vrch-tresnovka/',
     img: './img/Třešňovka',
@@ -141,7 +141,7 @@ const nature = [
     id: 5,
     name: 'Thomayerovy sady',
     address: '180 00 Praha 8',
-    coordinates: '50.108193,14.4673046,15z',
+    coordinates: [50.108193, 14.4673046],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://doparku.cz/projekt/thomayerovy-sady/',
     img: './img/Thomayerovy_sady',
@@ -150,7 +150,7 @@ const nature = [
     id: 6,
     name: 'Stezka podél řeky Rokytka',
     address: '180 00 Praha 8',
-    coordinates: '50.11041964899924, 14.474967651608983',
+    coordinates: [50.11041964899924, 14.474967651608983],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://pesistezky.cz/stezky/liben-hloubetin-podel-rokytky/',
     img: './img/Rokytka',
@@ -159,7 +159,7 @@ const nature = [
     id: 7,
     name: 'stezka podél Vltavy do Klecan',
     address: '',
-    coordinates: '50.1129667N, 14.4298258E',
+    coordinates: [50.112556, 14.429697],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.vylety-zabava.cz/cyklostezky-cyklotrasy-cyklovozik/okoli-prahy/221-cyklostezkou-podel-vltavy-z-klecanek-do-troje',
     img: './img/Vltavaa',
@@ -168,7 +168,7 @@ const nature = [
     id: 8,
     name: 'Stromovka',
     address: '',
-    coordinates: '50.1063295,14.4191289,15z',
+    coordinates: [50.1063295, 14.4191289],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.kudyznudy.cz/aktivity/kralovska-obora-stromovka',
     img: './img/Stromovka',
@@ -177,7 +177,7 @@ const nature = [
     id: 9,
     name: 'Divoká Šárka',
     address: '',
-    coordinates: '50.0933016,14.0366128,11z',
+    coordinates: [50.0933016, 14.0366128],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.kudyznudy.cz/aktivity/divoka-sarka-oaza-v-ruchu-velkomesta?gclid=CjwKCAjwm4ukBhAuEiwA0zQxk59vzxDADE3kP0H_90HV9n3xsdcWOJ0GvwVQ29qS-URv6AT-YZ4SnRoCiAkQAvD_BwE',
     img: './img/Divoka_sarka',
@@ -186,14 +186,14 @@ const nature = [
     id: 10,
     name: 'Prokopské údolí',
     address: '',
-    coordinates: '50.042436,14.297499,13z',
+    coordinates: [50.042436, 14.297499],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.kudyznudy.cz/aktivity/prirodni-rezervace-prokopske-udoli-prirodni-klen?gclid=CjwKCAjwm4ukBhAuEiwA0zQxk9fTcozD9rT_sjIxg-q3MUB2r6Q7U1g8xzN8YgIap8Xbkm8WVO4aghoCdtYQAvD_BwE',
     img: './img/Prokopske_udoli',
   },
 ];
 
-const restaurant = [
+export const restaurant = [
   {
     id: 1,
     name: 'Brambory na Pankráci',
@@ -288,7 +288,7 @@ const restaurant = [
   },
 ];
 
-const cafe = [
+export const cafe = [
   {
     id: 1,
     name: 'Ô-MAI',
