@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Montserrat:wght@200&family=Permanent+Marker&display=swap");
 
-
 .bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 1;
-  /* align-items: end; */
+  align-items: center;
   width: 60%;
-  height: 60%;
+  height: 100%;
   padding: 30px;
   position: absolute;
-  top: calc(85vh- 30%);
-  left: calc(100%/2 - 60%/2);
-  background-color: rgba(240, 239, 239, 0.876);
-  border-radius: 15px;
+  /* top: calc(85vh- 30%);
+  left: calc(100%/2 - 60%/2); */
+  /* background-color: rgba(240, 239, 239, 0.876); */
+  background-color: white;
+  /* border-radius: 15px; */
 }
 
 .input {
@@ -24,44 +24,60 @@
   width: 100%;
   text-align: center;
   color: rgb(128, 128, 128, 0.6);
+  background-color: #EEEEEE;
 }
 
 .search {
-  /* position: absolute;
-  bottom: 20px;
-  right: 20px; */
   background-color: #EEEEEE;
-  color: white;
+  color: rgb(128, 128, 128, 0.6);
   font-family: Montserrat;
+  border: rgb(101, 100, 100);
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   text-align: center;
   text-decoration: none;
-  /* display: block; */
+  display: block;
   border-radius: 5px;
   padding: 10px;
-
+  width: 80%;
 }
 
-.filters {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.select__all {
+  background-color: #EEEEEE;
+  color: rgb(128, 128, 128, 0.6);
+  font-family: Montserrat;
+  border: rgb(101, 100, 100);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
 }
 
 @media (min-width: 840px) {
   .bar {
-    width: 250px;
-    height: 80%;
-    left: 30px;
+    width: 300px;
+    height: 100%;
     justify-content: start;
   }
 
   .filters {
     position: absolute;
-    left: 50px;
-    top: 25%
+    top: 20%
+  }
+
+  .search {
+    position: absolute;
+    top: 80%
+  }
+
+  .select__all {
+    position: absolute;
+    top: 45%;
   }
 }
