@@ -193,7 +193,7 @@ export const places = [
     type: 'nature',
     name: 'Divoká Šárka',
     address: '',
-    coordinates: [14.0366128, 50.0933016],
+    coordinates: [14.3232818, 50.0929309],
     opening_hours: 'Otevřeno 24 hodin',
     url: 'https://www.kudyznudy.cz/aktivity/divoka-sarka-oaza-v-ruchu-velkomesta?gclid=CjwKCAjwm4ukBhAuEiwA0zQxk59vzxDADE3kP0H_90HV9n3xsdcWOJ0GvwVQ29qS-URv6AT-YZ4SnRoCiAkQAvD_BwE',
     img: './img/Divoka_sarka',
