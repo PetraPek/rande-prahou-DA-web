@@ -2,6 +2,7 @@ import React from 'react';
 export const Activity = ({ onClick }) => {
   return (
     <svg
+      className="icon"
       onClick={onClick}
       width="35"
       height="35"

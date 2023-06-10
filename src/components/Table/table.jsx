@@ -10,21 +10,21 @@ export const Table = () => {
         <span className="place_address">"adresa"</span>
       </div>
       <div className="opening_hours">
-        <table>
+        <div className="list">
           <ul>
             <li>Po: </li>
             <li>Út: </li>
             <li>St: </li>
             <li>Čt: </li>
           </ul>
-        </table>
-        <table>
+        </div>
+        <div className="list">
           <ul>
             <li>Pá: </li>
             <li>So: </li>
             <li>Ne: </li>
           </ul>
-        </table>
+        </div>
       </div>
       {/* {places.map((place) => {
         console.log(place);

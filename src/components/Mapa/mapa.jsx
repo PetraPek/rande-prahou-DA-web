@@ -14,23 +14,47 @@ import { Table } from '../Table/table';
 mapboxgl.accessToken =
   'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXB6ZXQ5azBuZW8zcW8xeHZrb2wzdjYifQ.YJbAIfRNFoVXaJkZbtNN8g';
 
-const Marker = ({ onClick, children, feature }) => {
-  const _onClick = () => {
-    onClick(feature.name);
+const Marker = ({ onClick, children, place, map }) => {
+  const [open, setOpen] = useState(false);
+  const closeWindow = () => {
+    console.log('closing');
+    setOpen(false);
   };
-  if (feature.type === 'activity') {
-    return <Activity onClick={_onClick} />;
+  useEffect(() => {
+    console.log('useEffect');
+    document.addEventListener('closeWindows', closeWindow);
+    return () => {
+      document.removeEventListener('closeWindows', closeWindow);
+    };
+  }, []);
+
+  const _onClick = () => {
+    map.flyTo({
+      center: place.coordinates,
+    });
+    const event = new Event('closeWindows');
+    document.dispatchEvent(event);
+    setOpen(true);
+  };
+  let Icon;
+  if (place.type === 'activity') {
+    Icon = Activity;
   }
-  if (feature.type === 'cafe') {
-    return <Coffee onClick={_onClick} />;
+  if (place.type === 'cafe') {
+    Icon = Coffee;
   }
-  if (feature.type === 'restaurant') {
-    console.log(feature.type === 'restaurant', feature.coordinates);
-    return <Restaurant onClick={_onClick} />;
+  if (place.type === 'restaurant') {
+    Icon = Restaurant;
   }
-  if (feature.type === 'nature') {
-    return <Nature onClick={_onClick} />;
+  if (place.type === 'nature') {
+    Icon = Nature;
   }
+  return (
+    <div className="marker" style={{ zIndex: open ? 5 : 0 }}>
+      {open ? <Table /> : null}
+      <Icon onClick={_onClick} />
+    </div>
+  );
 };
 
 export const Mapa = () => {
@@ -44,22 +68,31 @@ export const Mapa = () => {
       center: [14.35, 50.06],
       zoom: 11.5,
     });
+    // Center the map on the coordinates of any clicked circle from the 'circle' layer.
+    // map.on('click', Activity, (e) => {
+    //   console.log(e);
+    //   map.flyTo({
+    //     center: e.places[0].coordinates,
+    //   });
+    // });
+    // console.log(map.getStyle().layers);
 
     // Render custom marker components
-    places.forEach((feature) => {
+    places.forEach((place) => {
       // Create a React ref
       const ref = React.createRef();
       // Create a new DOM node and save it to the React ref
       ref.current = document.createElement('div');
       // Render a Marker Component on our new DOM node
       ReactDOM.createRoot(ref.current).render(
-        <Marker onClick={markerClicked} feature={feature} />,
+        <Marker map={map} place={place} />,
       );
-      // console.log(feature.coordinates);
+      // console.log(place.coordinates);
       // Create a Mapbox Marker at our new DOM node
-      new mapboxgl.Marker(ref.current)
-        .setLngLat(feature.coordinates)
+      const test = new mapboxgl.Marker(ref.current)
+        .setLngLat(place.coordinates)
         .addTo(map);
+      console.log(test);
     });
 
     // Add navigation control (the +/- zoom buttons)
@@ -69,22 +102,22 @@ export const Mapa = () => {
     return () => map.remove();
   }, []);
 
-  const markerClicked = (title) => {
-    window.alert(title);
-  };
+  // const markerClicked = (title) => {
+  //   window.alert(title);
+  // };
 
   return (
     <>
       <Bar />
-      <Table />
+      {/* <Table /> */}
       <div className="map-container" ref={mapContainerRef} />
     </>
   );
 };
 
-// const Marker = ({ onClick, children, feature }) => {
+// const Marker = ({ onClick, children, place }) => {
 //   const _onClick = () => {
-//     onClick(feature.properties.description);
+//     onClick(place.properties.description);
 //   };
 
 //   return (

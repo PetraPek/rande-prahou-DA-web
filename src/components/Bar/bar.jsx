@@ -19,7 +19,7 @@ export const Bar = () => {
         <br /> */}
       </div>
 
-      <button class="search">Vyhledat</button>
+      <button className="search">Vyhledat</button>
     </div>
   );
 };
