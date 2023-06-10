@@ -9,6 +9,7 @@ import { Activity } from '../../Icons/Activity/activity';
 import { Nature } from '../../Icons/Nature/nature';
 import { Restaurant } from '../../Icons/Restaurant/restaurant';
 import { Coffee } from '../../Icons/Coffee/coffee';
+import { Table } from '../Table/table';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXB6ZXQ5azBuZW8zcW8xeHZrb2wzdjYifQ.YJbAIfRNFoVXaJkZbtNN8g';
@@ -17,9 +18,9 @@ const Marker = ({ onClick, children, feature }) => {
   const _onClick = () => {
     onClick(feature.name);
   };
-  // if (feature.type === 'activity') {
-  //   return <Activity onClick={_onClick} />;
-  // }
+  if (feature.type === 'activity') {
+    return <Activity onClick={_onClick} />;
+  }
   if (feature.type === 'cafe') {
     return <Coffee onClick={_onClick} />;
   }
@@ -72,7 +73,13 @@ export const Mapa = () => {
     window.alert(title);
   };
 
-  return <div className="map-container" ref={mapContainerRef} />;
+  return (
+    <>
+      <Bar />
+      <Table />
+      <div className="map-container" ref={mapContainerRef} />
+    </>
+  );
 };
 
 // const Marker = ({ onClick, children, feature }) => {
