@@ -1,17 +1,17 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './mapa.css';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import mapboxgl from '!mapbox-gl';
 import { Bar } from '../Bar/bar';
 // import { SimpleMap } from '../SimpleMap/simpleMap';
-import { places, nature, restaurant, cafe } from '../../../places';
+import { places } from '../../../places';
 
 mapboxgl.accessToken =
   'pk.eyJ1Ijoiam9oYW5hcG9rb3JuYSIsImEiOiJjbGlwMTdleWMwNDF5M2dvNWc1NWwzNXprIn0.hEIF0JDNVVOQUXffkpgyxg';
 
 const Marker = ({ onClick, children, feature }) => {
   const _onClick = () => {
-    onClick(feature.properties.description);
+    onClick(feature.name);
   };
 
   return (
@@ -40,9 +40,8 @@ export const Mapa = () => {
       // Create a new DOM node and save it to the React ref
       ref.current = document.createElement('div');
       // Render a Marker Component on our new DOM node
-      ReactDOM.render(
+      ReactDOM.createRoot(ref.current).render(
         <Marker onClick={markerClicked} feature={feature} />,
-        ref.current,
       );
 
       // Create a Mapbox Marker at our new DOM node

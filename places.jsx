@@ -1,9 +1,10 @@
 export const places = [
   {
     id: 1,
+    type: 'activity',
     name: 'THE POPUP!',
     address: 'Dvorecké nám. 406/5, 147 00 Praha 4-Podolí',
-    coordinates: [50.0464865, 14.4141612],
+    coordinates: [14.4141612, 50.0464865],
     opening_hours:
       'ÚT / ČT Individuálně dle dohody  PO / ST / PÁ 14:00 - 20:00 SO / NE 10:00 - 18:30 ',
     url: 'https://www.thepopup.cz/',
@@ -11,6 +12,7 @@ export const places = [
   },
   {
     id: 2,
+    type: 'activity',
     name: 'Neviditelná večeře',
     address:
       'Novoměstská radnice 2. patro Karlovo nám. 1/23 - vstup z Vodičkovy ulice 120 00 Praha 2',
@@ -22,6 +24,7 @@ export const places = [
   },
   {
     id: 3,
+    type: 'activity',
     name: 'Laser game',
     address: 'Bohnická 320/40, 181 00 Praha',
     coordinates: [50.1330323, 14.412751],
@@ -32,6 +35,7 @@ export const places = [
   },
   {
     id: 4,
+    type: 'activity',
     name: 'Prague Boats - vyhlídková plavba',
     address: 'Dvořákovo nábř., 110 00 Josefov, Česko',
     coordinates: [50.091838, 14.416337],
@@ -43,6 +47,7 @@ export const places = [
 
   {
     id: 5,
+    type: 'activity',
     name: 'Půjčovna lodiček a šlapadel Slovanka',
     address: 'Slovanský ostrov, Praha 1, 110 00',
     coordinates: [50.0793101, 14.4121909],
@@ -52,6 +57,7 @@ export const places = [
   },
   {
     id: 6,
+    type: 'activity',
     name: 'Motokáry Radotín',
     address: 'Výpadová 1335, Praha 5 Radotín',
     coordinates: [49.9869742, 14.3711757],
@@ -61,6 +67,7 @@ export const places = [
   },
   {
     id: 7,
+    type: 'activity',
     name: 'Letní kino Sunset cinema',
     address:
       'Střecha obchodního centra Arkády Pankrác, Na Pankráci 86, 140 00 Praha 4-Nusle',
@@ -71,6 +78,7 @@ export const places = [
   },
   {
     id: 8,
+    type: 'activity',
     name: 'Ladronka - in-line',
     address: 'Tomanova 1028/1, 169 00 Praha 6-Břevnov',
     coordinates: [50.0787136, 14.3541518],
@@ -80,6 +88,7 @@ export const places = [
   },
   {
     id: 9,
+    type: 'activity',
     name: 'JumpArena',
     address: 'Ringhofferova 1,155 00 Zličín,Praha 5',
     coordinates: [50.055025, 14.293349],
@@ -90,6 +99,7 @@ export const places = [
   },
   {
     id: 10,
+    type: 'activity',
     name: 'Úniková hra',
     address: 'Mánesova 1613, 120 00 Vinohrady',
     coordinates: [50.0775832, 14.4400191],
@@ -97,11 +107,9 @@ export const places = [
     url: 'https://questerland.cz/',
     img: './img/UnikovaHra',
   },
-];
-
-export const nature = [
   {
-    id: 1,
+    id: 11,
+    type: 'nature',
     name: 'Petřínské sady',
     address: 'Petřínské sady 118 00, 118 00 Praha 1-Malá Strana',
     coordinates: [50.0822666, 14.4004938],
@@ -110,7 +118,8 @@ export const nature = [
     img: './img/petrin-park',
   },
   {
-    id: 2,
+    id: 12,
+    type: 'nature',
     name: 'Grébovka',
     address: 'Havlíčkovy sady, 120 00 Praha 2-Vinohrady',
     coordinates: [50.0694696, 14.4359799],
@@ -119,7 +128,8 @@ export const nature = [
     img: './img/Grébovka',
   },
   {
-    id: 3,
+    id: 13,
+    type: 'nature',
     name: 'Ďablický háj',
     address: 'K lomu 985/4, 182 00 Ďáblice',
     coordinates: [50.1368511, 14.44869],
@@ -128,7 +138,8 @@ export const nature = [
     img: './img/Ďáblický-háj',
   },
   {
-    id: 4,
+    id: 14,
+    type: 'nature',
     name: 'Vrch Třešňovka',
     address: '190 00, Praha 9',
     coordinates: [50.0973605, 14.5055092],
@@ -138,7 +149,8 @@ export const nature = [
   },
 
   {
-    id: 5,
+    id: 15,
+    type: 'nature',
     name: 'Thomayerovy sady',
     address: '180 00 Praha 8',
     coordinates: [50.108193, 14.4673046],
@@ -147,7 +159,8 @@ export const nature = [
     img: './img/Thomayerovy_sady',
   },
   {
-    id: 6,
+    id: 16,
+    type: 'nature',
     name: 'Stezka podél řeky Rokytka',
     address: '180 00 Praha 8',
     coordinates: [50.11041964899924, 14.474967651608983],
@@ -156,7 +169,8 @@ export const nature = [
     img: './img/Rokytka',
   },
   {
-    id: 7,
+    id: 17,
+    type: 'nature',
     name: 'stezka podél Vltavy do Klecan',
     address: '',
     coordinates: [50.112556, 14.429697],
@@ -165,7 +179,8 @@ export const nature = [
     img: './img/Vltavaa',
   },
   {
-    id: 8,
+    id: 18,
+    type: 'nature',
     name: 'Stromovka',
     address: '',
     coordinates: [50.1063295, 14.4191289],
@@ -174,7 +189,8 @@ export const nature = [
     img: './img/Stromovka',
   },
   {
-    id: 9,
+    id: 19,
+    type: 'nature',
     name: 'Divoká Šárka',
     address: '',
     coordinates: [50.0933016, 14.0366128],
@@ -183,7 +199,8 @@ export const nature = [
     img: './img/Divoka_sarka',
   },
   {
-    id: 10,
+    id: 20,
+    type: 'nature',
     name: 'Prokopské údolí',
     address: '',
     coordinates: [50.042436, 14.297499],
@@ -191,11 +208,9 @@ export const nature = [
     url: 'https://www.kudyznudy.cz/aktivity/prirodni-rezervace-prokopske-udoli-prirodni-klen?gclid=CjwKCAjwm4ukBhAuEiwA0zQxk9fTcozD9rT_sjIxg-q3MUB2r6Q7U1g8xzN8YgIap8Xbkm8WVO4aghoCdtYQAvD_BwE',
     img: './img/Prokopske_udoli',
   },
-];
-
-export const restaurant = [
   {
-    id: 1,
+    id: 21,
+    type: 'restaurant',
     name: 'Brambory na Pankráci',
     address: 'Na Pankráci 1724/129, Praha 4',
     coordinates: [50.0508484, 14.4408838],
@@ -205,7 +220,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 2,
+    id: 22,
+    type: 'restaurant',
     name: 'Bufet Karlín',
     address: 'U nádražní lávky 81/2, 18600 Praha 8 - Karlín',
     coordinates: [50.0508484, 14.4408838],
@@ -214,7 +230,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 3,
+    id: 23,
+    type: 'restaurant',
     name: 'Diego pivní bar',
     address: 'Sokolovská 467/114, Praha 8',
     coordinates: [50.0946785, 14.45535],
@@ -223,7 +240,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 4,
+    id: 24,
+    type: 'restaurant',
     name: 'Big Smokers',
     address: 'Dělnická 40, Praha 7 - Holešovice, 170 00',
     coordinates: [50.0946785, 14.45535],
@@ -232,7 +250,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 5,
+    id: 25,
+    type: 'restaurant',
     name: 'Automat Matuška',
     address: 'Dejvická 4, Praha 6, 160 00',
     coordinates: [50.0946785, 14.45535],
@@ -242,7 +261,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 6,
+    id: 26,
+    type: 'restaurant',
     name: 'Vinohradský pivovar',
     address: 'Korunní 2506/106, 101 00 Praha 10',
     coordinates: [50.0946785, 14.45535],
@@ -251,7 +271,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 7,
+    id: 27,
+    type: 'restaurant',
     name: 'Knedlín',
     address: 'Národní 24, Praha 1',
     coordinates: 'po-čt 9:00-21:00, pá 9:00-22:00, so-ne 10:00-22:00',
@@ -260,7 +281,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 8,
+    id: 28,
+    type: 'restaurant',
     name: 'Meat Vandals',
     address: 'Myslíkova 172/29, 11000 Praha 1',
     coordinates: [50.0782736, 14.4186861],
@@ -269,7 +291,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 9,
+    id: 29,
+    type: 'restaurant',
     name: 'Grosseto Vinohrady',
     address: 'Francouzská 2, Praha 2',
     coordinates: [50.0747202, 14.4352239],
@@ -278,7 +301,8 @@ export const restaurant = [
     img: '',
   },
   {
-    id: 10,
+    id: 30,
+    type: 'restaurant',
     name: 'Dish',
     address: 'Belgická 335/26, Praha 2, Vinohrady',
     coordinates: [50.0730522, 14.4361752],
@@ -286,11 +310,9 @@ export const restaurant = [
     url: 'https://www.dishbelgicka.cz/',
     img: '',
   },
-];
-
-export const cafe = [
   {
-    id: 1,
+    id: 31,
+    type: 'cafe',
     name: 'Ô-MAI',
     address: 'Sokolovská 444/118, Praha, 18600 Karlín',
     coordinates: [50.0730522, 14.4361752],
@@ -300,7 +322,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 2,
+    id: 32,
+    type: 'cafe',
     name: 'Etapa',
     address: 'Urxova 479/6, 18600 Praha',
     coordinates: [50.0944284, 14.4574513],
@@ -309,7 +332,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 3,
+    id: 33,
+    type: 'cafe',
     name: 'Café Záhorský',
     address: 'Eliášova 1, Praha 6, Dejvice 160 00',
     coordinates: [50.0945747, 14.4578129],
@@ -318,7 +342,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 4,
+    id: 34,
+    type: 'cafe',
     name: 'Mezi srnky Vinohrady',
     address: 'Sázavská 720/19, 120 00 Praha 2',
     coordinates: [50.0763421, 14.42239],
@@ -327,7 +352,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 5,
+    id: 35,
+    type: 'cafe',
     name: 'BISTRO PROTI PROUDU',
     address: 'Březinova 22 / 471, Praha 8 – Karlín, 186 00',
     coordinates: [50.0945706, 14.4561232],
@@ -336,7 +362,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 6,
+    id: 36,
+    type: 'cafe',
     name: 'Šodó',
     address: 'Wuchterlova 1, 16000 Praha',
     coordinates: [19.8734, 5.2498013],
@@ -345,7 +372,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 7,
+    id: 37,
+    type: 'cafe',
     name: 'Choco Café',
     address: 'Liliová 250/4, 11000 Praha 1 - Staré Město',
     coordinates: [50.0845713, 14.4165841],
@@ -354,7 +382,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 8,
+    id: 38,
+    type: 'cafe',
     name: 'SmetanaQ',
     address: 'Smetanovo nábřeží 334/4, Praha 1, 110 00',
     coordinates: [50.082046, 14.413262],
@@ -363,7 +392,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 9,
+    id: 39,
+    type: 'cafe',
     name: 'Skautský institut',
     address: 'Staroměstské náměstí 4/1, 11000 Praha 1 - Staré Město',
     coordinates: [50.0866698, 14.4199369],
@@ -372,7 +402,8 @@ export const cafe = [
     img: '',
   },
   {
-    id: 10,
+    id: 40,
+    type: 'cafe',
     name: 'Anežka',
     address: 'Anežská 812/12, 110 00',
     coordinates: [50.0920396, 14.4239316],
