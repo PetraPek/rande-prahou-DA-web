@@ -28,6 +28,13 @@
 } */
 
 .marker {
+  /* width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #8CBEC2;
+  background-image: '../../img/bx-restaurant(1)'; */
+
+
   background-color: #4CAF50;
   border: 1px solid blue;
   color: white;
