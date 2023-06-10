@@ -5,6 +5,10 @@ import mapboxgl from '!mapbox-gl';
 import { Bar } from '../Bar/bar';
 // import { SimpleMap } from '../SimpleMap/simpleMap';
 import { places } from '../../../places';
+import { Activity } from '../../Icons/Activity/activity';
+import { Nature } from '../../Icons/Nature/nature';
+import { Restaurant } from '../../Icons/Restaurant/restaurant';
+import { Coffee } from '../../Icons/Coffee/coffee';
 
 mapboxgl.accessToken =
   'pk.eyJ1Ijoiam9oYW5hcG9rb3JuYSIsImEiOiJjbGlwMTdleWMwNDF5M2dvNWc1NWwzNXprIn0.hEIF0JDNVVOQUXffkpgyxg';
@@ -13,12 +17,19 @@ const Marker = ({ onClick, children, feature }) => {
   const _onClick = () => {
     onClick(feature.name);
   };
-
-  return (
-    <button onClick={_onClick} className="marker">
-      {children}
-    </button>
-  );
+  // if (feature.type === 'activity') {
+  //   return <Activity onClick={_onClick} />;
+  // }
+  if (feature.type === 'cafe') {
+    return <Coffee onClick={_onClick} />;
+  }
+  if (feature.type === 'restaurant') {
+    console.log(feature.type === 'restaurant', feature.coordinates);
+    return <Restaurant onClick={_onClick} />;
+  }
+  if (feature.type === 'nature') {
+    return <Nature onClick={_onClick} />;
+  }
 };
 
 export const Mapa = () => {
@@ -30,7 +41,7 @@ export const Mapa = () => {
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [14.35, 50.06],
-      zoom: 10,
+      zoom: 11.5,
     });
 
     // Render custom marker components
@@ -43,7 +54,7 @@ export const Mapa = () => {
       ReactDOM.createRoot(ref.current).render(
         <Marker onClick={markerClicked} feature={feature} />,
       );
-      console.log(feature.coordinates);
+      // console.log(feature.coordinates);
       // Create a Mapbox Marker at our new DOM node
       new mapboxgl.Marker(ref.current)
         .setLngLat(feature.coordinates)
