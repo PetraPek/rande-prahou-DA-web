@@ -11,7 +11,7 @@ import { Restaurant } from '../../Icons/Restaurant/restaurant';
 import { Coffee } from '../../Icons/Coffee/coffee';
 
 mapboxgl.accessToken =
-  'pk.eyJ1Ijoiam9oYW5hcG9rb3JuYSIsImEiOiJjbGlwMTdleWMwNDF5M2dvNWc1NWwzNXprIn0.hEIF0JDNVVOQUXffkpgyxg';
+  'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXB6ZXQ5azBuZW8zcW8xeHZrb2wzdjYifQ.YJbAIfRNFoVXaJkZbtNN8g';
 
 const Marker = ({ onClick, children, feature }) => {
   const _onClick = () => {
@@ -39,7 +39,7 @@ export const Mapa = () => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/petrapeky/clipzmhu700qq01pf3a4e6tka',
       center: [14.35, 50.06],
       zoom: 11.5,
     });
