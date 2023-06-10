@@ -40,8 +40,8 @@ export const Mapa = () => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [14.35, 50.06],
-      zoom: 11.5,
+      center: [14.3251, 50.0666],
+      zoom: 11,
     });
 
     // Render custom marker components
