@@ -9,6 +9,7 @@ import { Activity } from '../../Icons/Activity/activity';
 import { Nature } from '../../Icons/Nature/nature';
 import { Restaurant } from '../../Icons/Restaurant/restaurant';
 import { Coffee } from '../../Icons/Coffee/coffee';
+import { Table } from '../Table/table';
 
 mapboxgl.accessToken =
   'pk.eyJ1Ijoiam9oYW5hcG9rb3JuYSIsImEiOiJjbGlwMTdleWMwNDF5M2dvNWc1NWwzNXprIn0.hEIF0JDNVVOQUXffkpgyxg';
@@ -17,9 +18,9 @@ const Marker = ({ onClick, children, feature }) => {
   const _onClick = () => {
     onClick(feature.name);
   };
-  // if (feature.type === 'activity') {
-  //   return <Activity onClick={_onClick} />;
-  // }
+  if (feature.type === 'activity') {
+    return <Activity onClick={_onClick} />;
+  }
   if (feature.type === 'cafe') {
     return <Coffee onClick={_onClick} />;
   }
@@ -40,8 +41,8 @@ export const Mapa = () => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [14.3251, 50.0666],
-      zoom: 11,
+      center: [14.4, 50.08],
+      zoom: 11.5,
     });
 
     // Render custom marker components
@@ -72,7 +73,13 @@ export const Mapa = () => {
     window.alert(title);
   };
 
-  return <div className="map-container" ref={mapContainerRef} />;
+  return (
+    <>
+      <Bar />
+      <Table />
+      <div className="map-container" ref={mapContainerRef} />
+    </>
+  );
 };
 
 // const Marker = ({ onClick, children, feature }) => {
