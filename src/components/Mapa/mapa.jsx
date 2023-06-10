@@ -43,7 +43,7 @@ export const Mapa = () => {
       ReactDOM.createRoot(ref.current).render(
         <Marker onClick={markerClicked} feature={feature} />,
       );
-
+      console.log(feature.coordinates);
       // Create a Mapbox Marker at our new DOM node
       new mapboxgl.Marker(ref.current)
         .setLngLat(feature.coordinates)
