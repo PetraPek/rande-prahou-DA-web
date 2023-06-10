@@ -15,26 +15,26 @@ mapboxgl.accessToken =
   'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXB6ZXQ5azBuZW8zcW8xeHZrb2wzdjYifQ.YJbAIfRNFoVXaJkZbtNN8g';
 
 const Marker = ({ onClick, children, place, map }) => {
-  const [open, setOpen] = useState(false);
-  const closeWindow = () => {
-    console.log('closing');
-    setOpen(false);
-  };
-  useEffect(() => {
-    console.log('useEffect');
-    document.addEventListener('closeWindows', closeWindow);
-    return () => {
-      document.removeEventListener('closeWindows', closeWindow);
-    };
-  }, []);
+  // const [open, setOpen] = useState(false);
+  // const closeWindow = () => {
+  //   console.log('closing');
+  //   setOpen(false);
+  // };
+  // useEffect(() => {
+  //   console.log('useEffect');
+  //   document.addEventListener('closeWindows', closeWindow);
+  //   return () => {
+  //     document.removeEventListener('closeWindows', closeWindow);
+  //   };
+  // }, []);
 
+  // const event = new Event('closeWindows');
+  // document.dispatchEvent(event);
+  // setOpen(true);
   const _onClick = () => {
     map.flyTo({
       center: place.coordinates,
     });
-    const event = new Event('closeWindows');
-    document.dispatchEvent(event);
-    setOpen(true);
   };
   let Icon;
   if (place.type === 'activity') {
@@ -51,7 +51,7 @@ const Marker = ({ onClick, children, place, map }) => {
   }
   return (
     <div className="marker" style={{ zIndex: open ? 5 : 0 }}>
-      {open ? <Table /> : null}
+      {/* {open ? <Table /> : null} */}
       <Icon onClick={_onClick} />
     </div>
   );
@@ -88,10 +88,14 @@ export const Mapa = () => {
         <Marker map={map} place={place} />,
       );
       // console.log(place.coordinates);
+      const popUp = document.createElement('div');
+      ReactDOM.createRoot(popUp).render(<Table />);
       // Create a Mapbox Marker at our new DOM node
       const test = new mapboxgl.Marker(ref.current)
+        .setPopup(new mapboxgl.Popup({ offset: 10 }).setDOMContent(popUp))
         .setLngLat(place.coordinates)
         .addTo(map);
+
       console.log(test);
     });
 

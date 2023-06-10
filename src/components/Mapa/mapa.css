@@ -14,35 +14,43 @@
   height: 90vh;
 }
 
-/* .sidebarStyle {
-  display: inline-block;
+.mapboxgl-popup-content {
+
+  background: #3e6048;
+  border-radius: 3px;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, .1); */
+  /* padding: 10px 10px 1px; */
+  padding: 0;
+  pointer-events: auto;
+  position: relative;
+  /* z-index: 5; */
+
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #ffffff;
+}
+
+.mapboxgl-popup-tip {
+  align-self: center;
+  border-bottom: none;
+  border: 20px solid transparent;
+  height: 0;
+  width: 0;
+  /* box-shadow: rgb(114, 112, 112) 0px 0px 10px; */
+  z-index: 3;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+  /* position: relative;
+  left: 5px;
+  color: #000000;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 12px;
-  background-color: #404040;
-  color: #ffffff;
-  z-index: 1 !important;
-  padding: 6px;
-  font-weight: bold;
-} */
-
-.marker {
-  /* width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: #8CBEC2;
-  background-image: '../../img/bx-restaurant(1)'; */
-
-
-  /* background-color: #4CAF50;
-  border: 1px solid blue;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 50%; */
+  right: 0;
+  top: 0; */
 }
