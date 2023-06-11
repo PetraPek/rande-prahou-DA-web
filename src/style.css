@@ -223,7 +223,7 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.menu a {
+.menu .rowMenu__elm {
   display: block;
   color: #000;
   text-decoration: none;

@@ -109,7 +109,7 @@ export const places = [
       So: '11:00 - 24:00',
       Ne: '11:00 - 24:00',
     },
-    url: 'https://www.kart-centrum.cz/',
+    url: 'www.kart-centrum.cz/',
     img: './img/Motokáry',
   },
   {

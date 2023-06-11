@@ -13,9 +13,15 @@ export const Header = () => {
       </div>
       <HamburgerMenu />
       <nav className="rowMenu">
-        <a href="/">O projektu</a>
-        <a href="/johana">Kdo je Johanka?</a>
-        <a href="/petra">Kdo je Peťa?</a>
+        <a className="rowMenu__elm" href="/">
+          O projektu
+        </a>
+        <a className="rowMenu__elm" href="/johana">
+          Kdo je Johanka?
+        </a>
+        <a className="rowMenu__elm" href="/petra">
+          Kdo je Peťa?
+        </a>
       </nav>
       {/* <div className="hamburger">
         <div className="hamburger__line"></div>

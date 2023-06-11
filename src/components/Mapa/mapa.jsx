@@ -91,9 +91,11 @@ export const Mapa = () => {
       const popUp = document.createElement('div');
       ReactDOM.createRoot(popUp).render(
         <Table
+          name={place.name}
           type={place.type}
           address={place.address}
           openingHours={place.opening_hours}
+          url={place.url}
         />,
       );
       // Create a Mapbox Marker at our new DOM node

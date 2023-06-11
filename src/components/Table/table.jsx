@@ -2,20 +2,32 @@ import React from 'react';
 import './table.css';
 import { places } from '../../../places';
 
-export const Table = ({ type, address, openingHours, coordinates }) => {
+export const Table = ({ name, type, address, openingHours, url }) => {
   console.log(openingHours);
   return (
     <div className="table">
-      <div className="colour_part">
-        <span className="place_name">{type}</span>
+      <div
+        className={
+          type === 'restaurant'
+            ? 'colour_part restaurant'
+            : type === 'cafe'
+            ? 'colour_part coffee'
+            : type === 'activity'
+            ? 'colour_part activity'
+            : 'colour_part nature'
+        }
+      >
+        <a className="place_url" href={url}>
+          {name}
+        </a>
         <span className="place_address">{address}</span>
+        <span></span>
       </div>
       <div className="opening_hours">
         <div className="list">
           <ul>
-            <li>Út: {openingHours.Po}</li>
-            <li>Út: {openingHours.Út}</li>
             <li>Po: {openingHours.Po}</li>
+            <li>Út: {openingHours.Út}</li>
             <li>St: {openingHours.St}</li>
             <li>Čt: {openingHours.Čt}</li>
           </ul>
