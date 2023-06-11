@@ -89,14 +89,20 @@ export const Mapa = () => {
       );
       // console.log(place.coordinates);
       const popUp = document.createElement('div');
-      ReactDOM.createRoot(popUp).render(<Table />);
+      ReactDOM.createRoot(popUp).render(
+        <Table
+          type={place.type}
+          address={place.address}
+          openingHours={place.opening_hours}
+        />,
+      );
       // Create a Mapbox Marker at our new DOM node
       const test = new mapboxgl.Marker(ref.current)
         .setPopup(new mapboxgl.Popup({ offset: 10 }).setDOMContent(popUp))
         .setLngLat(place.coordinates)
         .addTo(map);
 
-      console.log(test);
+      // console.log(test);
     });
 
     // Add navigation control (the +/- zoom buttons)
