@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import './mapa.css';
 import ReactDOM from 'react-dom/client';
 import mapboxgl from '!mapbox-gl';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { Bar } from '../Bar/bar';
 // import { SimpleMap } from '../SimpleMap/simpleMap';
 import { places } from '../../../places';
@@ -59,13 +61,9 @@ const Marker = ({ onClick, children, place, map }) => {
 
 export const Mapa = () => {
   const mapContainerRef = useRef(null);
-  const [filters, setFilters] = useState([
-    'restaurant',
-    'nature',
-    'cafe',
-    'activity',
-  ]);
-  // Initialize map when component mounts
+
+  const [filters, setFilters] = useState(['restaurant', 'nature', 'cafe']);
+
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
@@ -107,7 +105,20 @@ export const Mapa = () => {
       });
 
     // Add navigation control (the +/- zoom buttons)
+    map.addControl(
+      new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+      }),
+    );
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        trackUserLocation: true,
+        showUserHeading: true,
+        fitBoundsOptions: { maxZoom: 13 },
+      }),
+    );
 
     // Clean up on unmount
     return () => map.remove();

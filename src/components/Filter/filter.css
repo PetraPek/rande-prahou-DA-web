@@ -47,3 +47,8 @@
   margin: 0;
   gap: 10px;
 }
+
+.select__all {
+  top: 180px;
+  right: calc(250px/2 - 100px);
+}

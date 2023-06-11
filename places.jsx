@@ -58,7 +58,7 @@ export const places = [
   {
     id: 4,
     type: 'activity',
-    name: 'Prague Boats - vyhlídková plavba',
+    name: 'Prague Boats',
     address: 'Dvořákovo nábř., 110 00 Josefov, Česko',
     coordinates: [14.416337, 50.091838],
     opening_hours: {
@@ -78,7 +78,7 @@ export const places = [
   {
     id: 5,
     type: 'activity',
-    name: 'Půjčovna lodiček a šlapadel Slovanka',
+    name: 'Šlapadla/lodičky',
     address: 'Slovanský ostrov, Praha 1, 110 00',
     coordinates: [14.4121909, 50.0793101],
     opening_hours: {
@@ -115,7 +115,7 @@ export const places = [
   {
     id: 7,
     type: 'activity',
-    name: 'Letní kino Sunset cinema',
+    name: 'Sunset cinema',
     address:
       'Střecha obchodního centra Arkády Pankrác, Na Pankráci 86, 140 00 Praha 4-Nusle',
     coordinates: [14.4360898, 50.0509039],
@@ -279,7 +279,7 @@ export const places = [
   {
     id: 16,
     type: 'nature',
-    name: 'Stezka podél řeky Rokytka',
+    name: 'Stezka podél Rokytky',
     address: '180 00 Praha 8',
     coordinates: [14.474967651608983, 50.11041964899924],
     opening_hours: {
@@ -297,7 +297,7 @@ export const places = [
   {
     id: 17,
     type: 'nature',
-    name: 'stezka podél Vltavy do Klecan',
+    name: 'podél Vltavy do Klecan',
     address: '',
     coordinates: [14.429697, 50.112556],
     opening_hours: {

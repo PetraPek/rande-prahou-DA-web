@@ -6,7 +6,7 @@ export const Filter = ({ onFilterChange }) => {
     restaurant: true,
     nature: true,
     cafe: true,
-    activity: true,
+    activity: false,
   });
 
   const handleClick = (type) => {
@@ -95,6 +95,19 @@ export const Filter = ({ onFilterChange }) => {
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAShJREFUSEvtlLFNxFAQRN8UQAE0QBEkcCRkiA5ogARCErgECQJIqISMBO4SGqKAQWv9//XtM7ZP1hHdD63dmZ3ZWYsdP+0Ynz3BqMP/a5HtB+AEOB0d7e+CpaTAaV5RkMDvZwDXrYWkJnCqaE2wDWE15ErSoqugIZA0ay+2WzgbCoLA9g3wkqb/Ae4kvdVqbF8Dj8BB+n4r6XUqQbarYHaVZaCaNA03rAA4BK6AC+AY+AA+JT1nMNtHwCVwBpwD38C7pKdJCrZZbLd2iOAr5X8hadXxO+4iIpzvYwlEUvrqAqeEpV5yJoimiGrTbDtAm6aeVyKd6vIQvXcwBBTYhXjsKOtAbGS+pzmA1/X5J2Xd30q2q6hvHdqcxQ71zrraKUPtCUZd2rlFv6lMjRleDHXzAAAAAElFTkSuQmCC" />
           <div className="typeOfPlace">aktivita</div>
         </div>
+        <button
+          className="select__all"
+          onClick={() =>
+            setSelected({
+              restaurant: true,
+              nature: true,
+              cafe: true,
+              activity: true,
+            })
+          }
+        >
+          Vybrat vše
+        </button>
       </div>
     </>
   );
