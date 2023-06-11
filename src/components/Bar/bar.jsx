@@ -1,15 +1,10 @@
 import React from 'react';
 import './bar.css';
 import { Filter } from '../Filter/filter';
-import { Check } from '../../Icons/Check search/check';
 
 export const Bar = ({ onFilterChange }) => {
   return (
     <div className="bar">
-      <div className="bar__content">
-        <input type="text" className="input" defaultValue={'Zadejte adresu'} />
-        <Check />
-      </div>
       <div className="filters">
         <p className="filters__title">Vyber</p>
         <br />
