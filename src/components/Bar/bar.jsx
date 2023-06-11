@@ -5,9 +5,8 @@ import { Filter } from '../Filter/filter';
 export const Bar = ({ onFilterChange }) => {
   return (
     <div className="bar">
-      <input type="text" className="input" defaultValue={'Zadejte adresu'} />
-
       <div className="filters">
+        <p className="filters__title">Vyber</p>
         <br />
         <Filter onFilterChange={onFilterChange} />
         <br />
