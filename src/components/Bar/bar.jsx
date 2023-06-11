@@ -2,14 +2,14 @@ import React from 'react';
 import './bar.css';
 import { Filter } from '../Filter/filter';
 
-export const Bar = () => {
+export const Bar = ({ onFilterChange }) => {
   return (
     <div className="bar">
       <input type="text" className="input" defaultValue={'Zadejte adresu'} />
 
       <div className="filters">
         <br />
-        <Filter />
+        <Filter onFilterChange={onFilterChange} />
         <br />
         {/* <Filter />
         <br />
