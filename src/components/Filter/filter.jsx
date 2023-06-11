@@ -1,7 +1,7 @@
 import React from 'react';
 import './filter.css';
 
-export const Filter = () => {
+export const Filter = ({}) => {
   return (
     <>
       <div className="grid__container">
