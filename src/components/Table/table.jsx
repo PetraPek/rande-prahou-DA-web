@@ -3,7 +3,6 @@ import './table.css';
 import { places } from '../../../places';
 
 export const Table = ({ name, type, address, openingHours, url }) => {
-  console.log(openingHours);
   return (
     <div className="table">
       <div
@@ -54,10 +53,31 @@ export const Table = ({ name, type, address, openingHours, url }) => {
           </ul>
         </div>
       </div>
-      {/* {places.map((place) => {
-        console.log(place);
-        return <a href={place.url} className="place_link" />;
-      })} */}
     </div>
   );
 };
+
+// kód pro ternární operátor s možností odlišného zobrazení otevíracích hodin
+// {openingHours.Mon === 'Dle programu kina' ? (
+//   <span>Po - Ne: dle programu kina</span>
+// ) : openingHours.Mon === 'Otevřeno 24 hodin' ? (
+//   <span>Po - Ne: Otevřeno 24 hodin</span>
+// ) : (
+//   <>
+//     <div className="list">
+//       <ul>
+//         <li>Po: {openingHours.Mon}</li>
+//         <li>Út: {openingHours.Tue}</li>
+//         <li>St: {openingHours.Wed}</li>
+//         <li>Čt: {openingHours.Thu}</li>
+//       </ul>
+//     </div>
+//     <div className="list">
+//       <ul>
+//         <li>Pá: {openingHours.Fri}</li>
+//         <li>So: {openingHours.Sat}</li>
+//         <li>Ne: {openingHours.Sun}</li>
+//       </ul>
+//     </div>
+//   </>
+// )}
