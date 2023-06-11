@@ -121,7 +121,6 @@ export const Mapa = () => {
   return (
     <>
       <Bar />
-      {/* <Table /> */}
       <div className="map-container" ref={mapContainerRef} />
     </>
   );

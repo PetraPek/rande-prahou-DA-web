@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './filter.css';
 
-export const Filter = ({}) => {
+export const Filter = () => {
+  const [selected, setSelected] = useState({
+    restaurant: true,
+    nature: true,
+    coffee: true,
+    activity: true,
+  });
+  const handleClick = (type) => {
+    setSelected((prevSelected) => ({
+      ...prevSelected,
+      [type]: !prevSelected[type],
+    }));
+  };
   return (
     <>
       <div className="grid__container">
-        <div className="filter restaurant">
+        <div
+          className={
+            'filter ' + (selected.restaurant ? 'restaurant' : 'unselected')
+          }
+          onClick={() => handleClick('restaurant')}
+        >
           {/* <input type="radio" /> */}
           {/* <svg
         className="icon"
@@ -19,7 +36,10 @@ export const Filter = ({}) => {
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJxJREFUSEvtlN0NgCAMhO8mUydTJ9PNMBIhFX9OTTAm0idISb+W9kpkNmaOj/cBzjk3V0XSw9V9edMBaAH0JOdztE0FKuCOfwBQh4ghsXhPe/BFgP/SnBX8FaAEmI7x7R4IwEiysTq5AwiiOWNEQYWxvgwwyqysgAxtpdZHAJt6Kryjso7eyWVXAOWL4lA9niK1MpRf9kAFUP7sgAlH48wZr6VTKwAAAABJRU5ErkJggg==" />
           <div className="typeOfPlace">restaurace</div>
         </div>
-        <div className="filter nature">
+        <div
+          className={'filter ' + (selected.nature ? 'nature' : 'unselected')}
+          onClick={() => handleClick('nature')}
+        >
           {/* <input type="radio" /> */}
           {/* <svg
           className="icon"
@@ -33,7 +53,10 @@ export const Filter = ({}) => {
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlVEOwyAMQ/HN1pN1O9l6s3SZQEIZSRyp/Rs//QG/YjsC7eaFm/VbCSAiT/0hAN8vs2iAiDxaa+8uugE4rgaouEJ0HQC2ywDdmt0IvhirUosc8cFKISHA+O45EuaRAWbfPUCYhwtIrLEw1yomg7metPDYyABCmwCEGlkGOrG2nqVbRBlE1liI26QIwDRogNwmLQHFBoVD9wMgh2s5E6vAV4CKNWngaU1nBRGR/h7Q5+iNKvwHMA9UeU8pg7L658AJn7hdGZ+tzQQAAAAASUVORK5CYII=" />
           <div className="typeOfPlace">příroda</div>
         </div>
-        <div className="filter coffee">
+        <div
+          className={'filter ' + (selected.coffee ? 'coffee' : 'unselected')}
+          onClick={() => handleClick('coffee')}
+        >
           {/* <input type="radio" /> */}
           {/* <svg
             className="icon"
@@ -47,7 +70,12 @@ export const Filter = ({}) => {
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlUsKgDAMRJObeTP1ZOrJRkas9Cc0pS0IZuWi5jWZZKrSObRzfhkPALCIyGysbFVV/pdEUgEAGJNfx1U1241mAO9SQTU9AGQ9kGYAtsjXz7WsKYBXdxr+gHTee2sQEdtPkWUPNhGZjNtssgomJ6Q43mzispC3LAWmt3Njbx/idzbG23VxXwoPBhUAqBE4QMV6xICax8YHJNOUM7saCEU+cq/a90U+AbXTYxkIMYpEAAAAAElFTkSuQmCC" />
           <div className="typeOfPlace">kavárna</div>
         </div>
-        <div className="filter activity">
+        <div
+          className={
+            'filter ' + (selected.activity ? 'activity' : 'unselected')
+          }
+          onClick={() => handleClick('activity')}
+        >
           {/* <input type="radio" /> */}
           {/* <svg
               className="icon"

@@ -10,8 +10,7 @@
   border-radius: 10px;
   height: 60px;
   width: 120px;
-
-
+  cursor: pointer;
   text-align: center;
 }
 
@@ -29,6 +28,10 @@
 
 .activity {
   background-color: #5A7089;
+}
+
+.unselected {
+  background-color: #eeeeee;
 }
 
 .typeOfPlace {
