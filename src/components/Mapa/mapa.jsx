@@ -12,7 +12,7 @@ import { Coffee } from '../../Icons/Coffee/coffee';
 import { Table } from '../Table/table';
 
 mapboxgl.accessToken =
-  'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXB6ZXQ5azBuZW8zcW8xeHZrb2wzdjYifQ.YJbAIfRNFoVXaJkZbtNN8g';
+  'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXI5MjIxeTBoa2YzZ3BoNG1oc2tnM3IifQ.oU7xdOyHyl-8KO72hqLGBA';
 
 const Marker = ({ onClick, children, place, map }) => {
   // const [open, setOpen] = useState(false);
