@@ -6,8 +6,10 @@ import { Check } from '../../Icons/Check search/check';
 export const Bar = ({ onFilterChange }) => {
   return (
     <div className="bar">
-      <input type="text" className="input" defaultValue={'Zadejte adresu'} />
-      <Check onClick={() => console.log('Hledej')} />
+      <div className="bar__content">
+        <input type="text" className="input" defaultValue={'Zadejte adresu'} />
+        <Check />
+      </div>
       <div className="filters">
         <p className="filters__title">Vyber</p>
         <br />

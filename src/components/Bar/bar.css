@@ -59,6 +59,14 @@
   width: 80%;
 }
 
+.bar__content {
+  display: flex;
+}
+
+/* .checkIcon {
+  padding: 5px;
+} */
+
 @media (min-width: 840px) {
   .bar {
     width: 300px;

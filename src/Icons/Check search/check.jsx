@@ -8,9 +8,9 @@ export const Check = ({ onClick }) => {
   return (
     <svg
       className="checkIcon"
-      onClick={onClick}
-      width="24"
-      height="24"
+      onClick={() => console.log('Hledej')}
+      width="26"
+      height="26"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       style={changeStyle}
