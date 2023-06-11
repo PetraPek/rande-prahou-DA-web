@@ -3,7 +3,7 @@ import './bar.css';
 import { Filter } from '../Filter/filter';
 import { Check } from '../../Icons/Check search/check';
 
-export const Bar = () => {
+export const Bar = ({ onFilterChange }) => {
   return (
     <div className="bar">
       <input type="text" className="input" defaultValue={'Zadejte adresu'} />
@@ -11,7 +11,7 @@ export const Bar = () => {
       <div className="filters">
         <p className="filters__title">Vyber</p>
         <br />
-        <Filter />
+        <Filter onFilterChange={onFilterChange} />
         <br />
         {/* <Filter />
         <br />

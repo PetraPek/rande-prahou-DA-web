@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './filter.css';
 
-export const Filter = () => {
+export const Filter = ({ onFilterChange }) => {
   const [selected, setSelected] = useState({
     restaurant: true,
     nature: true,
-    coffee: true,
+    cafe: true,
     activity: true,
   });
+
   const handleClick = (type) => {
     setSelected((prevSelected) => ({
       ...prevSelected,
       [type]: !prevSelected[type],
     }));
   };
+
+  useEffect(() => {
+    onFilterChange(selected);
+  }, [selected]);
+
   return (
     <>
       <div className="grid__container">
@@ -54,8 +60,8 @@ export const Filter = () => {
           <div className="typeOfPlace">příroda</div>
         </div>
         <div
-          className={'filter ' + (selected.coffee ? 'coffee' : 'unselected')}
-          onClick={() => handleClick('coffee')}
+          className={'filter ' + (selected.cafe ? 'coffee' : 'unselected')}
+          onClick={() => handleClick('cafe')}
         >
           {/* <input type="radio" /> */}
           {/* <svg

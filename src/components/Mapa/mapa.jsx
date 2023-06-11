@@ -59,7 +59,12 @@ const Marker = ({ onClick, children, place, map }) => {
 
 export const Mapa = () => {
   const mapContainerRef = useRef(null);
-
+  const [filters, setFilters] = useState([
+    'restaurant',
+    'nature',
+    'cafe',
+    'activity',
+  ]);
   // Initialize map when component mounts
   useEffect(() => {
     const map = new mapboxgl.Map({
@@ -68,59 +73,54 @@ export const Mapa = () => {
       center: [14.35, 50.06],
       zoom: 11.5,
     });
-    // Center the map on the coordinates of any clicked circle from the 'circle' layer.
-    // map.on('click', Activity, (e) => {
-    //   console.log(e);
-    //   map.flyTo({
-    //     center: e.places[0].coordinates,
-    //   });
-    // });
-    // console.log(map.getStyle().layers);
 
     // Render custom marker components
-    places.forEach((place) => {
-      // Create a React ref
-      const ref = React.createRef();
-      // Create a new DOM node and save it to the React ref
-      ref.current = document.createElement('div');
-      // Render a Marker Component on our new DOM node
-      ReactDOM.createRoot(ref.current).render(
-        <Marker map={map} place={place} />,
-      );
-      // console.log(place.coordinates);
-      const popUp = document.createElement('div');
-      ReactDOM.createRoot(popUp).render(
-        <Table
-          name={place.name}
-          type={place.type}
-          address={place.address}
-          openingHours={place.opening_hours}
-          url={place.url}
-        />,
-      );
-      // Create a Mapbox Marker at our new DOM node
-      const test = new mapboxgl.Marker(ref.current)
-        .setPopup(new mapboxgl.Popup({ offset: 10 }).setDOMContent(popUp))
-        .setLngLat(place.coordinates)
-        .addTo(map);
+    places
+      .filter((place) => filters.includes(place.type))
+      .forEach((place) => {
+        // Create a React ref
+        const ref = React.createRef();
+        // Create a new DOM node and save it to the React ref
+        ref.current = document.createElement('div');
+        // Render a Marker Component on our new DOM node
+        ReactDOM.createRoot(ref.current).render(
+          <Marker map={map} place={place} />,
+        );
+        // console.log(place.coordinates);
+        const popUp = document.createElement('div');
+        ReactDOM.createRoot(popUp).render(
+          <Table
+            name={place.name}
+            type={place.type}
+            address={place.address}
+            openingHours={place.opening_hours}
+            url={place.url}
+          />,
+        );
+        // Create a Mapbox Marker at our new DOM node
+        const test = new mapboxgl.Marker(ref.current)
+          .setPopup(new mapboxgl.Popup({ offset: 10 }).setDOMContent(popUp))
+          .setLngLat(place.coordinates)
+          .addTo(map);
 
-      // console.log(test);
-    });
+        // console.log(test);
+      });
 
     // Add navigation control (the +/- zoom buttons)
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
     // Clean up on unmount
     return () => map.remove();
-  }, []);
+  }, [filters]);
 
-  // const markerClicked = (title) => {
-  //   window.alert(title);
-  // };
+  const handleFilterChange = (selected) => {
+    const newFilters = Object.keys(selected).filter((key) => selected[key]);
+    setFilters(newFilters);
+  };
 
   return (
     <>
-      <Bar />
+      <Bar onFilterChange={handleFilterChange} />
       <div className="map-container" ref={mapContainerRef} />
     </>
   );
