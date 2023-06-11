@@ -61,12 +61,14 @@
 
 @media (min-width: 840px) {
   .bar {
-    width: 300px;
+    width: 200px;
     height: 90vh;
     justify-content: start;
   }
 
   .filters {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 20%
   }

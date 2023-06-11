@@ -68,9 +68,25 @@ export const Mapa = () => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/petrapeky/clirfvqgf00sj01pfgts66vcx',
-      center: [14.35, 50.06],
-      zoom: 11.5,
+      center: [0, 0],
+      zoom: 1,
     });
+    const targetCenter = [14.412, 50.094]; // Souřadnice cílového místa
+    const targetZoom = 11.8; // Zoom level pro cílové místo
+
+    // Animace plynulého přiblížení na cílové místo po 2 vteřinách
+    setTimeout(() => {
+      map.flyTo({
+        center: targetCenter,
+        zoom: targetZoom,
+        speed: 1.5, // Rychlost animace (0.8 je zvolená hodnota, můžete ji upravit)
+        curve: 1.2, // Křivka animace (1.2 je zvolená hodnota, můžete ji upravit)
+        easing: (t) => t, // Easing funkce pro plynulost animace
+        essential: true, // Zajišťuje, že animace bude považována za důležitou
+      });
+    }, 300); // Přibližování začne po 2 vteřinách
+
+    map.setMaxZoom(20);
 
     // Render custom marker components
     places
@@ -109,6 +125,7 @@ export const Mapa = () => {
       new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
+        countries: 'cz',
       }),
     );
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
