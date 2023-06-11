@@ -64,7 +64,7 @@ export const Mapa = () => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/petrapeky/clipzmhu700qq01pf3a4e6tka',
+      style: 'mapbox://styles/petrapeky/cliras2ld00sa01pg4apkc5n1',
       center: [14.35, 50.06],
       zoom: 11.5,
     });
