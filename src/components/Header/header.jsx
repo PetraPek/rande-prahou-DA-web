@@ -9,12 +9,17 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="title">
-        <h1 className="title__main">Rande Prahou</h1>
+        <a href="/">
+          <h1 className="title__main">Rande Prahou</h1>
+        </a>
       </div>
       <HamburgerMenu />
       <nav className="rowMenu">
         <a className="rowMenu__elm" href="/">
           O projektu
+        </a>
+        <a className="rowMenu__elm" href="/mapa">
+          Mapa
         </a>
         <a className="rowMenu__elm" href="/johana">
           Kdo je Johanka?
@@ -23,18 +28,6 @@ export const Header = () => {
           Kdo je Peťa?
         </a>
       </nav>
-      {/* <div className="hamburger">
-        <div className="hamburger__line"></div>
-        <div className="hamburger__line"></div>
-        <div className="hamburger__line"></div>
-      </div>
-
-    */}
-      {/* <nav className="menu">
-        <Link to="/">O projektu</Link>
-        <Link to="/johana">Kdo je Johanka?</Link>
-        <Link to="/petra">Kdo je Peťa?</Link>
-      </nav> */}
     </header>
   );
 };

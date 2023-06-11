@@ -24,5 +24,4 @@ const router = createBrowserRouter([
   { path: '/petra', element: <Petra /> },
   { path: '/johana', element: <Johana /> },
   { path: '/mapa', element: <Mapa /> },
-  ,
 ]);
