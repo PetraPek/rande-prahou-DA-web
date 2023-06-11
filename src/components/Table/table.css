@@ -45,14 +45,24 @@
 
 .place_name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  margin-left: 20px;
+  font-size: 25px;
+  margin-left: 10px;
   color: white;
 }
 
+.place_name:hover {
+  /* font-size: 30px; */
+  font-weight: bold;
+}
+
+.place_name:focus {
+  outline: none
+}
+
+
 .place_address {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   margin: 10px 0 20px 20px;
 }
@@ -62,10 +72,6 @@
   font-size: 15px;
   color: white;
   margin: 10px 0 20px 20px;
-}
-
-.place_url:focus {
-  outline: none
 }
 
 .opening_hours {
@@ -104,7 +110,6 @@ li {
   width: 30%;
   color: black
 }
-
 
 .marker {
   position: relative;
