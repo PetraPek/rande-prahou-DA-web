@@ -63,31 +63,34 @@ export const Mapa = () => {
   const mapContainerRef = useRef(null);
 
   const [filters, setFilters] = useState(['restaurant', 'nature', 'cafe']);
-
+  const [zoomMap, setZoomMap] = useState(true);
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/petrapeky/clirfvqgf00sj01pfgts66vcx',
-      center: [0, 0],
-      zoom: 1,
+      // center: [0, 0],
+      center: [14.412, 50.094],
+      zoom: 11.8,
+      // zoom: 1,
     });
     const targetCenter = [14.412, 50.094]; // Souřadnice cílového místa
     const targetZoom = 11.8; // Zoom level pro cílové místo
 
     // Animace plynulého přiblížení na cílové místo po 2 vteřinách
-    setTimeout(() => {
-      map.flyTo({
-        center: targetCenter,
-        zoom: targetZoom,
-        speed: 1.5, // Rychlost animace (0.8 je zvolená hodnota, můžete ji upravit)
-        curve: 1.2, // Křivka animace (1.2 je zvolená hodnota, můžete ji upravit)
-        easing: (t) => t, // Easing funkce pro plynulost animace
-        essential: true, // Zajišťuje, že animace bude považována za důležitou
-      });
-    }, 300); // Přibližování začne po 2 vteřinách
-
+    // if (zoomMap) {
+    //   setTimeout(() => {
+    //     map.flyTo({
+    //       center: targetCenter,
+    //       zoom: targetZoom,
+    //       speed: 1.5, // Rychlost animace (0.8 je zvolená hodnota, můžete ji upravit)
+    //       curve: 1.2, // Křivka animace (1.2 je zvolená hodnota, můžete ji upravit)
+    //       easing: (t) => t, // Easing funkce pro plynulost animace
+    //       essential: true, // Zajišťuje, že animace bude považována za důležitou
+    //     });
+    //     setZoomMap(false);
+    //   }, 300); // Přibližování začne po 2 vteřinách
+    // }
     map.setMaxZoom(20);
-
     // Render custom marker components
     places
       .filter((place) => filters.includes(place.type))

@@ -6,7 +6,7 @@ export const Bar = ({ onFilterChange }) => {
   return (
     <div className="bar">
       <div className="filters">
-        <p className="filters__title">Vyber</p>
+        <p className="filters__title">Filtr</p>
         <br />
         <Filter onFilterChange={onFilterChange} />
         <br />
@@ -18,7 +18,7 @@ export const Bar = ({ onFilterChange }) => {
         <br /> */}
       </div>
 
-      <button className="search">Vyhledat</button>
+      {/* <button className="search">Vyhledat</button> */}
     </div>
   );
 };
