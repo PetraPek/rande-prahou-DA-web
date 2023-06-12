@@ -59,7 +59,8 @@ body {
 .description_card {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+
   width: 90%;
   min-width: 600px;
   height: 95%;
@@ -74,6 +75,7 @@ body {
   justify-content: center;
   text-align: center;
   line-height: 1.5;
+  height: 80%;
 }
 
 .description__question {
@@ -89,21 +91,6 @@ body {
   font-size: 80%;
   margin: 0 0 10px 0;
 }
-
-/* .background {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background-image: url(./img/mapa.jpg);
-  background-size: cover;
-  background-position: 20%;
-  opacity: 30%;
-  filter: grayscale(0.3);
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
-} */
 
 .figma {
   display: flex;
@@ -178,7 +165,6 @@ body {
   width: 30px;
   height: 25px;
   cursor: pointer;
-
 }
 
 .hamburger-menu {
@@ -230,9 +216,16 @@ body {
   margin: 10px;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+.rowMenu a:hover {
+  /* background-color: #d4d4d4; */
+  border: 1px solid #d4d4d4;
+  /* font-size: 25px; */
 }
+
+.rowMenu__elm a:active {
+  font-size: 25px;
+}
+
 
 .rowMenu {
   display: none;
@@ -263,11 +256,12 @@ body {
   }
 
   .figma_picture {
-    width: 40%;
+    width: 50%;
+    max-width: 840px;
   }
 
   a {
-    padding: 10px;
+    padding: 30px 10px 30px 10px;
     text-decoration: none;
     color: #333;
   }

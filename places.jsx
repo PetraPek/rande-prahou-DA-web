@@ -189,7 +189,7 @@ export const places = [
     id: 11,
     type: 'nature',
     name: 'Petřínské sady',
-    address: 'Petřínské sady 118 00, 118 00 Praha 1-Malá Strana',
+    address: 'Petřínské sady, Praha 1-Malá Strana',
     coordinates: [14.4004938, 50.0822666],
     opening_hours: {
       Mon: 'Otevřeno 24 hodin',
@@ -243,7 +243,7 @@ export const places = [
     id: 14,
     type: 'nature',
     name: 'Vrch Třešňovka',
-    address: '190 00, Praha 9',
+    address: '190 00 Praha 9',
     coordinates: [14.5055092, 50.0973605],
     opening_hours: {
       Mon: 'Otevřeno 24 hodin',
@@ -316,7 +316,7 @@ export const places = [
     id: 18,
     type: 'nature',
     name: 'Stromovka',
-    address: '',
+    address: 'Královská obora, Bubeneč, 170 00 Praha 7',
     coordinates: [14.4191289, 50.1063295],
     opening_hours: {
       Mon: 'Otevřeno 24 hodin',
@@ -334,7 +334,7 @@ export const places = [
     id: 19,
     type: 'nature',
     name: 'Divoká Šárka',
-    address: '',
+    address: '116 00 Praha 6',
     coordinates: [14.3232818, 50.0929309],
     opening_hours: {
       Mon: 'Otevřeno 24 hodin',
@@ -352,7 +352,7 @@ export const places = [
     id: 20,
     type: 'nature',
     name: 'Prokopské údolí',
-    address: '',
+    address: 'Jinonice, 158 00 Praha 5',
     coordinates: [14.297499, 50.042436],
     opening_hours: {
       Mon: 'Otevřeno 24 hodin',
