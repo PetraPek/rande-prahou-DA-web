@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import figma_logo_web from './img/figma_logo_web.png';
 import figma_mapa_druhastrana from './img/figma_mapa_druhastrana.png';
 
 export const Home = () => {
+  const [changeSizeOne, setChangeSizeOne] = useState(false);
+  const [changeSizeTwo, setChangeSizeTwo] = useState(false);
   return (
     <div className="content">
       <div className="description_card">
@@ -29,14 +31,24 @@ export const Home = () => {
           <h3>Grafický návrh</h3>
           <div className="figma">
             <img
-              className="figma_picture"
+              className={
+                'figma_picture ' + (changeSizeOne ? 'different__size' : '')
+              }
               src={figma_logo_web}
-              alt="figma_logo_web"
+              alt="figma_map"
+              onClick={() => {
+                setChangeSizeOne(!changeSizeOne);
+              }}
             />
             <img
-              className="figma_picture"
+              className={
+                'figma_picture ' + (changeSizeTwo ? 'different__size' : '')
+              }
               src={figma_mapa_druhastrana}
-              alt="figma-mapa-druhastrana"
+              alt="figma_mobile_drift"
+              onClick={() => {
+                setChangeSizeTwo(!changeSizeTwo);
+              }}
             />
           </div>
           <a class="whereToGo" href="/mapa">
