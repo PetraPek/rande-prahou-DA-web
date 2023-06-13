@@ -21,6 +21,7 @@ export const HamburgerMenu = () => {
       {isMenuOpen && (
         <div className="menu">
           <a href="/">O projektu</a>
+          <a href="/mapa">Mapa</a>
           <a href="/johana">Kdo je Johanka?</a>
           <a href="/petra">Kdo je Peťa?</a>
         </div>

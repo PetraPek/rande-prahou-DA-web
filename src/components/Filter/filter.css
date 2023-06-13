@@ -42,10 +42,10 @@
 }
 
 .grid__container {
-  display: flex;
-  flex-direction: column;
+  display: none;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -85,4 +85,18 @@
   /* border: 5px solid#a8a7a7; */
   background-color: #b2b1b1;
   color: white;
+}
+
+@media (min-width: 840px) {
+  .grid__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0;
+    gap: 10px; */
+  }
 }

@@ -141,10 +141,9 @@ body {
 
 .menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   /* flex-wrap: wrap; */
   color: #333;
-  align-items: center;
   position: absolute;
   z-index: 1;
   top: 40px;
@@ -235,6 +234,11 @@ body {
   display: none;
 }
 
+a {
+  padding: 20px 10px 20px 10px;
+  text-decoration: none;
+  color: #333;
+}
 
 /* Responsivní styly */
 @media (min-width: 840px) {
@@ -274,11 +278,7 @@ body {
     max-width: 1200px;
   }
 
-  a {
-    padding: 20px 10px 20px 10px;
-    text-decoration: none;
-    color: #333;
-  }
+
 
   /* .rowMenu__elm:active {
     font-size: 25px;
