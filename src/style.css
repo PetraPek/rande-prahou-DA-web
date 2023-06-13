@@ -219,17 +219,22 @@ body {
 .rowMenu a:hover {
   /* background-color: #d4d4d4; */
   border: 1px solid #d4d4d4;
+  border-radius: 5px;
   /* font-size: 25px; */
 }
 
-.rowMenu__elm a:active {
+/* .rowMenu__elm a:active {
   font-size: 25px;
-}
+} */
 
+.active {
+  background-color: #c1c1c1;
+}
 
 .rowMenu {
   display: none;
 }
+
 
 /* Responsivní styly */
 @media (min-width: 840px) {
@@ -270,8 +275,12 @@ body {
   }
 
   a {
-    padding: 30px 10px 30px 10px;
+    padding: 20px 10px 20px 10px;
     text-decoration: none;
     color: #333;
   }
+
+  /* .rowMenu__elm:active {
+    font-size: 25px;
+  } */
 }

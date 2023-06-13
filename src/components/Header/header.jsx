@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // import { Home } from '../Home/home';
 // import { Johana } from '../Johana/johana';
@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import { HamburgerMenu } from '../Hamburger/hamburger';
 
 export const Header = () => {
+  const [openMenuItem, setOpenMenuItem] = useState(null);
+  const handleClick = (openItem) => {
+    console.log('klik');
+    setOpenMenuItem(openItem);
+  };
   return (
     <header className="header">
       <div className="title">
@@ -15,16 +20,36 @@ export const Header = () => {
       </div>
       <HamburgerMenu />
       <nav className="rowMenu">
-        <a className="rowMenu__elm" href="/mapa">
+        <a
+          className={
+            'rowMenu__elm ' + (openMenuItem === 'mapa' ? 'active' : '')
+          }
+          href="/mapa"
+          onClick={() => handleClick('mapa')}
+        >
           Mapa
         </a>
-        <a className="rowMenu__elm" href="/">
+        <a
+          className={'rowMenu__elm ' + (openMenuItem === '' ? 'active' : '')}
+          href="/"
+          onClick={() => handleClick('')}
+        >
           O projektu
         </a>
-        <a className="rowMenu__elm" href="/johana">
+        <a
+          className={
+            'rowMenu__elm ' + (openMenuItem === 'johana' ? 'active' : '')
+          }
+          href="/johana"
+          onClick={() => handleClick('johana')}
+        >
           Kdo je Johanka?
         </a>
-        <a className="rowMenu__elm" href="/petra">
+        <a
+          className={'rowMenu__elm ' + (openMenuItem === '' ? 'active' : '')}
+          href="/petra"
+          onClick={() => handleClick}
+        >
           Kdo je Peťa?
         </a>
       </nav>

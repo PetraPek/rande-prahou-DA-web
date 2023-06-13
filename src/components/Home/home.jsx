@@ -5,6 +5,7 @@ import figma_mapa_druhastrana from './img/figma_mapa_druhastrana.png';
 export const Home = () => {
   const [changeSizeOne, setChangeSizeOne] = useState(false);
   const [changeSizeTwo, setChangeSizeTwo] = useState(false);
+
   return (
     <div className="content">
       <div className="description_card">
