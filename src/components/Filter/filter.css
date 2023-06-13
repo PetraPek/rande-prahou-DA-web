@@ -28,7 +28,7 @@
 }
 
 .activity {
-  background-color: #5A7089;
+  background-color: #5a7089;
 }
 
 .unselected {
@@ -42,15 +42,14 @@
 }
 
 .grid__container {
-  display: none;
-  /* flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  /* display: grid;
+  align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin: 0;
-  gap: 10px; */
+  gap: 10px;
 }
 
 /* .select__all {

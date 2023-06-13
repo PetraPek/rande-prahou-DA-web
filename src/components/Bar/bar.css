@@ -98,73 +98,63 @@
   padding: 10px;
   width: 80%;
 } */
+.bar__off {
+  display: none;
+}
+
+.bar__desktop {
+  display: none;
+}
 
 .bar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  z-index: 2;
+  justify-content: end;
   align-items: center;
-  width: 40%;
-  height: 100%;
+  width: 200px;
+  height: 55vh;
   padding: 30px;
+  padding-top: 10%;
   position: absolute;
-  /* top: calc(85vh- 30%);
-  left: calc(100%/2 - 60%/2);
-  background-color: rgba(240, 239, 239, 0.876);
-  background-color: white; */
-  /* border-radius: 15px; */
+  z-index: 2;
+  /* top: 15%; */
+  background-color: white;
+  border-radius: 0px 0px 15px 15px;
 }
 
-/* .bar__icon {
+.filter__icon {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
   width: 50px;
+  color: rgb(108, 108, 108);
+  padding: 8px;
   background-color: rgb(252, 255, 255);
   border-radius: 10px;
   position: absolute;
-  z-index: 2;
-  top: 130px;
+  z-index: 3;
+  top: 125px;
   left: 20px;
   cursor: pointer;
-} */
-
-.filter__icon {}
-
-.input {
-  border-radius: 25px;
-  border: rgb(101, 100, 100);
-  height: 30px;
-  width: 100%;
-  text-align: center;
-  color: rgb(128, 128, 128, 0.6);
-  background-color: #EEEEEE;
 }
 
-.search {
-  background-color: #EEEEEE;
-  color: rgb(128, 128, 128, 0.6);
-  font-family: Montserrat;
-  border: rgb(101, 100, 100);
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  border-radius: 5px;
-  padding: 10px;
-  width: 80%;
+.filters {
+  display: flex;
+  flex-direction: column;
+
 }
 
 .filters__title {
-  display: none;
+  display: flex;
 }
 
+
+
+
 @media (min-width: 840px) {
-  .bar {
+
+  .bar__desktop {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -176,6 +166,10 @@
     z-index: 2;
     background-color: white;
     /* border-radius: 15px; */
+  }
+
+  .filter__icon {
+    display: none;
   }
 
   .filters {
@@ -193,3 +187,34 @@
     top: 80%
   }
 }
+
+/* .search {
+  position: absolute;
+  top: 80%
+}
+
+.search {
+  background-color: #EEEEEE;
+  color: rgb(128, 128, 128, 0.6);
+  font-family: Montserrat;
+  border: rgb(101, 100, 100);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+} */
+
+/* .input {
+  border-radius: 25px;
+  border: rgb(101, 100, 100);
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: rgb(128, 128, 128, 0.6);
+  background-color: #EEEEEE;
+} */
