@@ -21,15 +21,6 @@ export const Header = () => {
       <HamburgerMenu />
       <nav className="rowMenu">
         <a
-          className={
-            'rowMenu__elm ' + (openMenuItem === 'mapa' ? 'active' : '')
-          }
-          href="/mapa"
-          onClick={() => handleClick('mapa')}
-        >
-          Mapa
-        </a>
-        <a
           className={'rowMenu__elm ' + (openMenuItem === '' ? 'active' : '')}
           href="/"
           onClick={() => handleClick('')}
@@ -38,20 +29,30 @@ export const Header = () => {
         </a>
         <a
           className={
+            'rowMenu__elm ' + (openMenuItem === 'mapa' ? 'active' : '')
+          }
+          href="/mapa"
+          onClick={() => handleClick('mapa')}
+        >
+          Mapa
+        </a>
+
+        <a
+          className={
             'rowMenu__elm ' + (openMenuItem === 'johana' ? 'active' : '')
           }
           href="/johana"
           onClick={() => handleClick('johana')}
         >
-          Kdo je Johanka?
+          O nás
         </a>
-        <a
+        {/* <a
           className={'rowMenu__elm ' + (openMenuItem === '' ? 'active' : '')}
           href="/petra"
           onClick={() => handleClick}
         >
           Kdo je Peťa?
-        </a>
+        </a> */}
       </nav>
     </header>
   );
