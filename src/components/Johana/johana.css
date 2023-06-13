@@ -74,7 +74,7 @@
 @media (min-width: 840px) {
   .personal__card {
     width: 90%;
-    max-width: 800px;
+    max-width: 600px;
   }
 
   .personal__foto {
