@@ -64,32 +64,35 @@ export const Mapa = () => {
 
   const [filters, setFilters] = useState(['restaurant', 'nature', 'cafe']);
   const [zoomMap, setZoomMap] = useState(true);
+  const [center, setCenter] = useState([0, 0]);
+  const [zoom, setZoom] = useState(1);
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/petrapeky/clirfvqgf00sj01pfgts66vcx',
-      // center: [0, 0],
-      center: [14.412, 50.094],
-      zoom: 11.8,
-      // zoom: 1,
+      center: center,
+      // center: [14.412, 50.094],
+      // zoom: 11.8,
+      zoom: zoom,
     });
     const targetCenter = [14.412, 50.094]; // Souřadnice cílového místa
     const targetZoom = 11.8; // Zoom level pro cílové místo
 
     // Animace plynulého přiblížení na cílové místo po 2 vteřinách
-    // if (zoomMap) {
-    //   setTimeout(() => {
-    //     map.flyTo({
-    //       center: targetCenter,
-    //       zoom: targetZoom,
-    //       speed: 1.5, // Rychlost animace (0.8 je zvolená hodnota, můžete ji upravit)
-    //       curve: 1.2, // Křivka animace (1.2 je zvolená hodnota, můžete ji upravit)
-    //       easing: (t) => t, // Easing funkce pro plynulost animace
-    //       essential: true, // Zajišťuje, že animace bude považována za důležitou
-    //     });
-    //     setZoomMap(false);
-    //   }, 300); // Přibližování začne po 2 vteřinách
-    // }
+    zoomMap
+      ? setTimeout(() => {
+          map.flyTo({
+            center: targetCenter,
+            zoom: targetZoom,
+            speed: 1.5, // Rychlost animace (0.8 je zvolená hodnota, můžete ji upravit)
+            curve: 1.2, // Křivka animace (1.2 je zvolená hodnota, můžete ji upravit)
+            easing: (t) => t, // Easing funkce pro plynulost animace
+            essential: true, // Zajišťuje, že animace bude považována za důležitou
+          });
+          setZoomMap(false);
+        }, 300)
+      : (setCenter([14.412, 50.094]), setZoom(11.8)); // Přibližování začne po 2 vteřinách
+
     map.setMaxZoom(20);
     // Render custom marker components
     places
