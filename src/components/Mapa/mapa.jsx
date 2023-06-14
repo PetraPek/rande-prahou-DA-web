@@ -81,6 +81,7 @@ export const Mapa = () => {
     // Animace plynulého přiblížení na cílové místo po 2 vteřinách
     zoomMap
       ? setTimeout(() => {
+          setZoomMap(false);
           map.flyTo({
             center: targetCenter,
             zoom: targetZoom,
@@ -89,9 +90,9 @@ export const Mapa = () => {
             easing: (t) => t, // Easing funkce pro plynulost animace
             essential: true, // Zajišťuje, že animace bude považována za důležitou
           });
-          setZoomMap(false);
+          setCenter([14.412, 50.094]), setZoom(11.8);
         }, 300)
-      : (setCenter([14.412, 50.094]), setZoom(11.8)); // Přibližování začne po 2 vteřinách
+      : null; // Přibližování začne po 2 vteřinách
 
     map.setMaxZoom(20);
     // Render custom marker components
