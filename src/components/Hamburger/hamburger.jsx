@@ -22,7 +22,7 @@ export const HamburgerMenu = () => {
         <div className="menu">
           <a href="/">O projektu</a>
           <a href="/mapa">Mapa</a>
-          <a href="/johana">O nás</a>
+          <a href="/onas">O nás</a>
           {/* <a href="/petra">Kdo je Peťa?</a> */}
         </div>
       )}
