@@ -115,10 +115,10 @@
   padding: 30px;
   padding-top: 12%;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   /* top: 15%; */
   background-color: white;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0px 15px 15px 15px;
 }
 
 .filter__icon {
@@ -131,7 +131,7 @@
   background-color: rgb(252, 255, 255);
   border-radius: 10px;
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 11%;
   left: 20px;
   cursor: pointer;

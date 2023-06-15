@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './mapa.css';
 import ReactDOM from 'react-dom/client';
-import mapboxgl from '!mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { Bar } from '../Bar/bar';
@@ -16,7 +16,7 @@ import { Table } from '../Table/table';
 mapboxgl.accessToken =
   'pk.eyJ1IjoicGV0cmFwZWt5IiwiYSI6ImNsaXI5MjIxeTBoa2YzZ3BoNG1oc2tnM3IifQ.oU7xdOyHyl-8KO72hqLGBA';
 
-const Marker = ({ onClick, children, place, map }) => {
+const Marker = ({ onClick, children, place, map, weatherData }) => {
   // const [open, setOpen] = useState(false);
   // const closeWindow = () => {
   //   console.log('closing');
@@ -55,6 +55,10 @@ const Marker = ({ onClick, children, place, map }) => {
     <div className="marker" style={{ zIndex: open ? 5 : 0 }}>
       {/* {open ? <Table /> : null} */}
       <Icon onClick={_onClick} />
+      {/* <div className="weather-info">
+        <p>Temperature: {weatherData.temperature}°C</p>
+        <p>Description: {weatherData.description}</p>
+      </div> */}
     </div>
   );
 };
@@ -63,7 +67,7 @@ export const Mapa = () => {
   const mapContainerRef = useRef(null);
 
   const [filters, setFilters] = useState(['restaurant', 'nature', 'cafe']);
-  const [zoomMap, setZoomMap] = useState(true);
+  // const [zoomMap, setZoomMap] = useState(true);
   const [center, setCenter] = useState([0, 0]);
   const [zoom, setZoom] = useState(1);
   useEffect(() => {
@@ -79,22 +83,22 @@ export const Mapa = () => {
     const targetZoom = 11.8; // Zoom level pro cílové místo
 
     // Animace plynulého přiblížení na cílové místo po 2 vteřinách
-    zoomMap
-      ? setTimeout(() => {
-          setZoomMap(false);
-          map.flyTo({
-            center: targetCenter,
-            zoom: targetZoom,
-            speed: 1.5, // Rychlost animace (0.8 je zvolená hodnota, můžete ji upravit)
-            curve: 1.2, // Křivka animace (1.2 je zvolená hodnota, můžete ji upravit)
-            easing: (t) => t, // Easing funkce pro plynulost animace
-            essential: true, // Zajišťuje, že animace bude považována za důležitou
-          });
-          setCenter([14.412, 50.094]), setZoom(11.8);
-        }, 300)
-      : null; // Přibližování začne po 2 vteřinách
+
+    setTimeout(() => {
+      // setZoomMap(false);
+      map.flyTo({
+        center: targetCenter,
+        zoom: targetZoom,
+        speed: 1.5, // Rychlost animace
+        curve: 1.2, // Křivka animace s
+        easing: (t) => t, // Easing funkce pro plynulost animace
+        essential: true, // Zajišťuje, že animace bude považována za důležitou
+      });
+      setCenter([14.412, 50.094]), setZoom(11.8);
+    }, 300); // Přibližování začne po ... vteřinách
 
     map.setMaxZoom(20);
+
     // Render custom marker components
     places
       .filter((place) => filters.includes(place.type))
