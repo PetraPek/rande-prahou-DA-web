@@ -1,6 +1,6 @@
 import React from 'react';
 import './johana.css';
-import johyy from './img/johyy.jpg';
+import johyy from './img/johyy.JPG';
 import { Petra } from '../Petra/petra';
 
 export const Johana = () => {
