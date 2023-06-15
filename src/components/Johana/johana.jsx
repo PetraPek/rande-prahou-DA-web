@@ -1,5 +1,6 @@
 import React from 'react';
-import johyy from './img/johyy.jpg';
+import './johana.css';
+import johyPicture from './img/johyPicture.jpg';
 import { Petra } from '../Petra/petra';
 
 export const Johana = () => {
@@ -7,7 +8,11 @@ export const Johana = () => {
     <div className="about__us">
       <div className="personal__content">
         <div className="personal__card">
-          <img className="personal__foto" src={johyy} alt="Johana Pokorná" />
+          <img
+            className="personal__foto"
+            src={johyPicture}
+            alt="Johana Pokorná"
+          />
           <div className="personal__description">
             <h1 className="personal__title">Johanka</h1>
 
