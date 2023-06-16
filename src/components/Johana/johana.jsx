@@ -1,5 +1,5 @@
 import React from 'react';
-import './johana.css';
+import '../Johana/johana.css';
 import johyy from './img/johyy.jpg';
 import { Petra } from '../Petra/petra';
 
