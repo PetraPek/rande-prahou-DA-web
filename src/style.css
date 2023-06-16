@@ -53,13 +53,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100%;
 }
 
 .description_card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 20px;
   width: 90%;
   /* min-width: 600px; */
@@ -285,6 +286,10 @@ a {
     z-index: 2;
     width: 100%;
     max-width: 1200px;
+  }
+
+  .content {
+    height: 90vh;
   }
 
 
