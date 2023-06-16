@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Johana/johana.css';
+import './johana.css';
 import johyy from './img/johyy.jpg';
 import { Petra } from '../Petra/petra';
 
@@ -8,9 +8,13 @@ export const Johana = () => {
     <div className="about__us">
       <div className="personal__content">
         <div className="personal__card">
-          <img className="personal__foto" src={johyy} alt="Johana Pokorná" />
+          <img
+            className="personal__foto"
+            src={johyPicture}
+            alt="Johana Pokorná"
+          />
           <div className="personal__description">
-            <h1 className="personal__title">Johanka</h1>
+            <h1 className="personal__title">Johana Pokorná</h1>
 
             <p className="personal__info">
               Kdo jsem a něco o mně - jsem otevřená kniha, miluju zábavu, ráda

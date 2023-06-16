@@ -60,7 +60,7 @@ export const Filter = ({ onFilterChange }) => {
           className={'select__all ' + (selectedAll ? '' : 'button__off')}
           // disabled={selectedAll ? false : true}
           onClick={() => {
-            setSelectedAll(!selectedAll);
+            // setSelectedAll(!selectedAll);
             setSelected({
               restaurant: true,
               nature: true,
@@ -69,6 +69,15 @@ export const Filter = ({ onFilterChange }) => {
             });
           }}
         >
+          {/* {selected ===
+          {
+            restaurant: true,
+            nature: true,
+            cafe: true,
+            activity: true,
+          }
+            ? selectedAll(true)
+            : null} */}
           {selectedAll ? 'Vybrat vše' : 'Vše vybráno'}
         </button>
       </div>

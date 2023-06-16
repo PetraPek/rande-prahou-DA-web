@@ -41,7 +41,7 @@ export const Header = () => {
           className={
             'rowMenu__elm ' + (openMenuItem === 'johana' ? 'active' : '')
           }
-          href="/johana"
+          href="/onas"
           onClick={() => handleClick('johana')}
         >
           O nás
