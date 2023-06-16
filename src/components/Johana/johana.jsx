@@ -14,7 +14,7 @@ export const Johana = () => {
             alt="Johana Pokorná"
           />
           <div className="personal__description">
-            <h1 className="personal__title">Johanka</h1>
+            <h1 className="personal__title">Johana Pokorná</h1>
 
             <p className="personal__info">
               Kdo jsem a něco o mně - jsem otevřená kniha, miluju zábavu, ráda

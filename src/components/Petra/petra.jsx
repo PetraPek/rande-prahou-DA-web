@@ -8,7 +8,7 @@ export const Petra = () => {
       <div className="personal__card">
         <img className="personal__foto" src={petra} alt="Petra Pekařová" />
         <div className="personal__description">
-          <h1 className="personal__title">Peťa</h1>
+          <h1 className="personal__title">Petra Pekařová</h1>
 
           <p className="personal__info">
             Ke kódování, programování a celkově k Czechitas jsem se dostala jako
