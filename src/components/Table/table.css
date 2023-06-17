@@ -2,7 +2,7 @@
   position: absolute;
   top: -300px;
   left: -185px;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -113,4 +113,32 @@ li {
 
 .marker {
   position: relative;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #ffffff;
+}
+
+.mapboxgl-popup-tip {
+  align-self: center;
+  border-bottom: none;
+  border: 20px solid transparent;
+  height: 0;
+  width: 0;
+  /* box-shadow: rgb(114, 112, 112) 0px 0px 10px; */
+  z-index: 4;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+  /* position: relative;
+  left: 5px;
+  color: #000000;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0; */
 }

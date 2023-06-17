@@ -131,7 +131,7 @@
   background-color: rgb(252, 255, 255);
   border-radius: 10px;
   position: absolute;
-  z-index: 4;
+  z-index: 1;
   top: 11%;
   left: 20px;
   cursor: pointer;
@@ -148,6 +148,13 @@
 }
 
 
+
+@media (max-width: 380px) {
+  .filter__icon {
+    top: 75px;
+    left: 10px;
+  }
+}
 
 
 @media (min-width: 840px) {
