@@ -1,103 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Montserrat:wght@200&family=Permanent+Marker&display=swap");
-
-.bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 1;
-  align-items: center;
-  width: 60%;
-  height: 100%;
-  padding: 30px;
-  position: absolute;
-  /* top: calc(85vh- 30%);
-  left: calc(100%/2 - 60%/2); */
-/* background-color: rgba(240, 239, 239, 0.876); */
-/* background-color: white; */
-/* border-radius: 15px; */
-/* } */
-
-/* .filter__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  background-color: rgb(252, 255, 255);
-  border-radius: 10px;
-  position: absolute;
-  z-index: 2;
-  top: 130px;
-  left: 20px;
-  cursor: pointer;
-}
-
-.input {
-  border-radius: 25px;
-  border: rgb(101, 100, 100);
-  height: 30px;
-  width: 100%;
-  text-align: center;
-  color: rgb(128, 128, 128, 0.6);
-  background-color: #EEEEEE;
-}
-
-.filters {
-  display: none;
-}
-
-.filters__title {
-  display: none;
-} */
-
-/* @media (min-width: 840px) {
-  .bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-    align-items: center;
-    width: 60%;
-    height: 100%;
-    padding: 30px;
-    position: absolute; */
-/* top: calc(85vh- 30%);
-    left: calc(100%/2 - 60%/2); */
-/* background-color: rgba(240, 239, 239, 0.876); */
-/* background-color: white; */
-/* border-radius: 15px; */
-/* width: 200px;
-    height: 90vh;
-    justify-content: start;
-  } */
-
-/* .filters {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 20%
-  }
-
-  .filter__icon {
-    display: none;
-  }
-} */
-
-/* .search {
-  background-color: #EEEEEE;
-  color: rgb(128, 128, 128, 0.6);
-  font-family: Montserrat;
-  border: rgb(101, 100, 100);
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  border-radius: 5px;
-  padding: 10px;
-  width: 80%;
-} */
 .bar__off {
   display: none;
 }
@@ -128,12 +28,13 @@
   height: 50px;
   width: 50px;
   padding: 8px;
+  margin-top: 10px;
   background-color: rgb(252, 255, 255);
   border-radius: 10px;
   position: absolute;
-  z-index: 1;
-  top: 11%;
-  left: 20px;
+  z-index: 4;
+  /* top: 10px; */
+  left: 10px;
   cursor: pointer;
 }
 
@@ -149,12 +50,12 @@
 
 
 
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
   .filter__icon {
     top: 75px;
     left: 10px;
   }
-}
+} */
 
 
 @media (min-width: 840px) {
