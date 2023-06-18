@@ -14,11 +14,11 @@
   /* height: 55vh; */
   padding: 30px;
   padding-top: 12%;
+  margin: 5px 0px 0px 10px;
   position: absolute;
   z-index: 3;
-  /* top: 15%; */
   background-color: white;
-  border-radius: 0px 15px 15px 15px;
+  border-radius: 15px;
 }
 
 .filter__icon {
