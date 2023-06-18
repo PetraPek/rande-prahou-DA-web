@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import './bar.css';
 import { Filter } from '../Filter/filter';
 
-export const Bar = ({ onFilterChange }) => {
+export const Bar = ({ filters, setFilters }) => {
   const [openBar, setOpenBar] = useState(false);
   const handleClick = () => {
-    console.log('klik');
     setOpenBar(!openBar);
   };
   return (
@@ -26,17 +25,9 @@ export const Bar = ({ onFilterChange }) => {
         <div className="filters">
           <p className="filters__title">Filtr</p>
           <br />
-          <Filter onFilterChange={onFilterChange} />
+          <Filter filters={filters} setFilters={setFilters} />
           <br />
-          {/* <Filter />
-        <br />
-        <Filter />
-        <br />
-        <Filter />
-        <br /> */}
         </div>
-
-        {/* <button className="search">Vyhledat</button> */}
       </div>
     </>
   );

@@ -1,32 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import './filter.css';
 
-export const Filter = ({ onFilterChange }) => {
+export const Filter = ({ filters, setFilters }) => {
   const [selectedAll, setSelectedAll] = useState(true);
-  const [selected, setSelected] = useState({
-    restaurant: true,
-    nature: true,
-    cafe: true,
-    activity: false,
-  });
-
-  const handleClick = (type) => {
-    setSelected((prevSelected) => ({
-      ...prevSelected,
-      [type]: !prevSelected[type],
-    }));
-  };
+  const items = ['restaurant', 'nature', 'cafe', 'activity'];
 
   useEffect(() => {
-    onFilterChange(selected);
-  }, [selected]);
+    setSelectedAll(items.every((item) => filters.includes(item)));
+  }, [filters]);
+
+  const handleClick = (type) => {
+    if (filters.includes(type)) {
+      setFilters((prev) => prev.filter((item) => item !== type));
+    } else {
+      setFilters((prev) => [...prev, type]);
+    }
+  };
 
   return (
     <>
       <div className="grid__container">
         <div
           className={
-            'filter ' + (selected.restaurant ? 'restaurant' : 'unselected')
+            'filter ' +
+            (filters.includes('restaurant') ? 'restaurant' : 'unselected')
           }
           onClick={() => handleClick('restaurant')}
         >
@@ -34,14 +31,18 @@ export const Filter = ({ onFilterChange }) => {
           <div className="typeOfPlace">restaurace</div>
         </div>
         <div
-          className={'filter ' + (selected.nature ? 'nature' : 'unselected')}
+          className={
+            'filter ' + (filters.includes('nature') ? 'nature' : 'unselected')
+          }
           onClick={() => handleClick('nature')}
         >
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlVEOwyAMQ/HN1pN1O9l6s3SZQEIZSRyp/Rs//QG/YjsC7eaFm/VbCSAiT/0hAN8vs2iAiDxaa+8uugE4rgaouEJ0HQC2ywDdmt0IvhirUosc8cFKISHA+O45EuaRAWbfPUCYhwtIrLEw1yomg7metPDYyABCmwCEGlkGOrG2nqVbRBlE1liI26QIwDRogNwmLQHFBoVD9wMgh2s5E6vAV4CKNWngaU1nBRGR/h7Q5+iNKvwHMA9UeU8pg7L658AJn7hdGZ+tzQQAAAAASUVORK5CYII=" />
           <div className="typeOfPlace">příroda</div>
         </div>
         <div
-          className={'filter ' + (selected.cafe ? 'coffee' : 'unselected')}
+          className={
+            'filter ' + (filters.includes('cafe') ? 'coffee' : 'unselected')
+          }
           onClick={() => handleClick('cafe')}
         >
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlUsKgDAMRJObeTP1ZOrJRkas9Cc0pS0IZuWi5jWZZKrSObRzfhkPALCIyGysbFVV/pdEUgEAGJNfx1U1241mAO9SQTU9AGQ9kGYAtsjXz7WsKYBXdxr+gHTee2sQEdtPkWUPNhGZjNtssgomJ6Q43mzispC3LAWmt3Njbx/idzbG23VxXwoPBhUAqBE4QMV6xICax8YHJNOUM7saCEU+cq/a90U+AbXTYxkIMYpEAAAAAElFTkSuQmCC" />
@@ -49,7 +50,8 @@ export const Filter = ({ onFilterChange }) => {
         </div>
         <div
           className={
-            'filter ' + (selected.activity ? 'activity' : 'unselected')
+            'filter ' +
+            (filters.includes('activity') ? 'activity' : 'unselected')
           }
           onClick={() => handleClick('activity')}
         >
@@ -57,28 +59,13 @@ export const Filter = ({ onFilterChange }) => {
           <div className="typeOfPlace">aktivita</div>
         </div>
         <button
-          className={'select__all ' + (selectedAll ? '' : 'button__off')}
-          // disabled={selectedAll ? false : true}
+          className={'select__all ' + (selectedAll ? 'button__off' : '')}
+          disabled={selectedAll ? true : false}
           onClick={() => {
-            // setSelectedAll(!selectedAll);
-            setSelected({
-              restaurant: true,
-              nature: true,
-              cafe: true,
-              activity: true,
-            });
+            setFilters(['restaurant', 'nature', 'cafe', 'activity']);
           }}
         >
-          {/* {selected ===
-          {
-            restaurant: true,
-            nature: true,
-            cafe: true,
-            activity: true,
-          }
-            ? selectedAll(true)
-            : null} */}
-          {selectedAll ? 'Vybrat vše' : 'Vše vybráno'}
+          {selectedAll ? 'Vše vybráno' : 'Vybrat vše'}
         </button>
       </div>
     </>
