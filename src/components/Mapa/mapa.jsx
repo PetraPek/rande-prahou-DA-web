@@ -72,19 +72,19 @@ export const Mapa = () => {
       return;
     }
 
-    // Animace plynulého přiblížení na cílové místo po 2 vteřinách
+    // Animation
     setTimeout(() => {
       map.flyTo({
         center: [14.412, 50.094],
         zoom: 11.8,
-        speed: 1.5, // Rychlost animace
-        curve: 1.2, // Křivka animace s
-        easing: (t) => t, // Easing funkce pro plynulost animace
-        essential: true, // Zajišťuje, že animace bude považována za důležitou
+        speed: 1.5,
+        curve: 1.2,
+        easing: (t) => t,
+        essential: true,
       });
       setCenter([14.412, 50.094]);
       setZoom(11.8);
-    }, 300); // Přibližování začne po ... vteřinách
+    }, 300);
 
     // Add navigation control (the +/- zoom buttons)
     map.addControl(
