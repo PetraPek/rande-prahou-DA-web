@@ -60,12 +60,15 @@ export const Filter = ({ filters, setFilters }) => {
         </div>
         <button
           className={'select__all ' + (selectedAll ? 'button__off' : '')}
-          disabled={selectedAll ? true : false}
           onClick={() => {
-            setFilters(['restaurant', 'nature', 'cafe', 'activity']);
+            if (filters.length === items.length) {
+              setFilters([]);
+            } else {
+              setFilters(items);
+            }
           }}
         >
-          {selectedAll ? 'Vše vybráno' : 'Vybrat vše'}
+          {selectedAll ? 'Odebrat vše' : 'Vybrat vše'}
         </button>
       </div>
     </>
